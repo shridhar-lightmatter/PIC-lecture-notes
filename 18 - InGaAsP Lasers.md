@@ -6,11 +6,13 @@ The importance of lasers based on **InGaAsP** stems from their emission range of
 
 The four-element **III–V** semiconductor alloy **InGaAsP** is a versatile laser material, typically grown on an **InP substrate**.\* The chemical formula for this quaternary alloy can be expressed as
 
-$$\text{In}_{x}\text{Ga}_{1-x}\text{As}_{y}\text{P}_{1-y}$$
+```math
+\text{In}_{x}\text{Ga}_{1-x}\text{As}_{y}\text{P}_{1-y}
+```
 
-where $x$ & $y$ are composition parameters in the range $(0,1)$ — i.e. $0 \le x \le 1$ and $0 \le y \le 1$. In particular, the composition $(x = 0.53,\ y = 1)$, leading to $\text{In}_{0.53}\text{Ga}_{0.47}\text{As}$, is of importance as it leads to high-quality lasers, thanks to the **"lattice constant"** match between thin films of InGaAs and the InP substrate.
+where $`x`$ & $`y`$ are composition parameters in the range $`(0,1)`$ — i.e. $`0 \le x \le 1`$ and $`0 \le y \le 1`$. In particular, the composition $`(x = 0.53,\ y = 1)`$, leading to $`\text{In}_{0.53}\text{Ga}_{0.47}\text{As}`$, is of importance as it leads to high-quality lasers, thanks to the **"lattice constant"** match between thin films of InGaAs and the InP substrate.
 
-For this reason, $\text{In}_{0.53}\text{Ga}_{0.47}\text{As}$ is often referred to as **"standard"** InGaAs. (It is an alloy of two compounds: $\text{In}_{x}\text{Ga}_{x}\text{As} = (\text{InAs})_{x}\,(\text{GaAs})_{1-x}$.)
+For this reason, $`\text{In}_{0.53}\text{Ga}_{0.47}\text{As}`$ is often referred to as **"standard"** InGaAs. (It is an alloy of two compounds: $`\text{In}_{x}\text{Ga}_{x}\text{As} = (\text{InAs})_{x}\,(\text{GaAs})_{1-x}`$.)
 
 > \* Here, InP — with its larger bandgap (1.35 eV) — provides confinement of generated light as well as charge carriers to the cavity (undoped InGaAs).
 
@@ -22,7 +24,7 @@ In the Figure above a typical InGaAsP laser diode is shown being **OOK driven** 
 
 ![Fig 2 — Spectral distribution of a 1.3 μm InGaAsP buried-heterostructure laser](figures/18/fig02-spectral-dist.png)
 
-*Figure 16.3-5. Spectral distribution of a 1.3-μm InGaAsP index-guided buried-heterostructure laser. (This distribution is considerably narrower, and differs in shape, from that of the $\lambda_o = 1.3\,\mu m$ InGaAsP LED. The number of modes decreases as the injection current increases; the mode closest to the gain maximum increases in power while the side peaks saturate.) (Adapted from R. J. Nelson, R. B. Wilson, P. D. Wright, P. A. Barnes, and N. K. Dutta, CW Electrooptical Properties of InGaAsP Buried-Heterostructure Lasers, IEEE Journal of Quantum Electronics, vol. QE-17, pp. 202–207, © 1981 IEEE.)*
+*Figure 16.3-5. Spectral distribution of a 1.3-μm InGaAsP index-guided buried-heterostructure laser. (This distribution is considerably narrower, and differs in shape, from that of the $`\lambda_o = 1.3\,\mu m`$ InGaAsP LED. The number of modes decreases as the injection current increases; the mode closest to the gain maximum increases in power while the side peaks saturate.) (Adapted from R. J. Nelson, R. B. Wilson, P. D. Wright, P. A. Barnes, and N. K. Dutta, CW Electrooptical Properties of InGaAsP Buried-Heterostructure Lasers, IEEE Journal of Quantum Electronics, vol. QE-17, pp. 202–207, © 1981 IEEE.)*
 
 ---
 
@@ -32,75 +34,103 @@ In the Figure above a typical InGaAsP laser diode is shown being **OOK driven** 
 
 **Cavity:**
 
-$$\begin{cases} L = 400\ \mu m \\ n_{\text{eff}} = 3.5 \quad (\text{InGaAsP}) \\ \lambda_o = 1.301\ \mu m \end{cases}$$
+```math
+\begin{cases} L = 400\ \mu m \\ n_{\text{eff}} = 3.5 \quad (\text{InGaAsP}) \\ \lambda_o = 1.301\ \mu m \end{cases}
+```
 
 **Calculate:**
 
-1. Mode-spacing ($\Delta f$ & $\Delta \lambda$)
-2. Number of modes ($N$) possible inside $B = 1.2\ \text{THz}$
-3. $L = ?$ for $N = 1$
+1. Mode-spacing ($`\Delta f`$ & $`\Delta \lambda`$)
+2. Number of modes ($`N`$) possible inside $`B = 1.2\ \text{THz}`$
+3. $`L = ?`$ for $`N = 1`$
 
 **Solution:**
 
-$$m\,\frac{\lambda_m / 2}{n_{\text{eff}}} = L \quad\rightarrow\quad \lambda_m = \frac{2\,n_{\text{eff}}\,L}{m}$$
+```math
+m\,\frac{\lambda_m / 2}{n_{\text{eff}}} = L \quad\rightarrow\quad \lambda_m = \frac{2\,n_{\text{eff}}\,L}{m}
+```
 
-$$f_m = \frac{c}{\lambda_m} = \frac{m\,c}{2\,n_{\text{eff}}\,L} \qquad \left( f_{m+1} = (m+1)\frac{c}{2\,n_{\text{eff}}\,L} \right)$$
+```math
+f_m = \frac{c}{\lambda_m} = \frac{m\,c}{2\,n_{\text{eff}}\,L} \qquad \left( f_{m+1} = (m+1)\frac{c}{2\,n_{\text{eff}}\,L} \right)
+```
 
-$$\Delta f = f_{m+1} - f_m = \frac{c}{2\,n_{\text{eff}}\,L} = 107.1\ \text{GHz}$$
+```math
+\Delta f = f_{m+1} - f_m = \frac{c}{2\,n_{\text{eff}}\,L} = 107.1\ \text{GHz}
+```
 
-$$\frac{\Delta \lambda}{\lambda} = -\frac{\Delta f}{f} \qquad \left( f = \frac{c}{\lambda_o} = 230.6\ \text{THz} \right)$$
+```math
+\frac{\Delta \lambda}{\lambda} = -\frac{\Delta f}{f} \qquad \left( f = \frac{c}{\lambda_o} = 230.6\ \text{THz} \right)
+```
 
-$$\Delta \lambda = \lambda\,\frac{\Delta f}{f} = 1301 \cdot \frac{107.1\ \text{GHz}}{230.6\ \text{THz}} = 0.604\ \text{nm}$$
+```math
+\Delta \lambda = \lambda\,\frac{\Delta f}{f} = 1301 \cdot \frac{107.1\ \text{GHz}}{230.6\ \text{THz}} = 0.604\ \text{nm}
+```
 
-$$N - 1 = \frac{B}{\Delta f} = \frac{1.2\ \text{THz}}{107.1\ \text{GHz}} = 11 \quad\rightarrow\quad N \approx 12$$
+```math
+N - 1 = \frac{B}{\Delta f} = \frac{1.2\ \text{THz}}{107.1\ \text{GHz}} = 11 \quad\rightarrow\quad N \approx 12
+```
 
-**For $N = 1$:** make $\Delta f = B$
+**For $`N = 1`$:** make $`\Delta f = B`$
 
-$$\Delta f = \frac{c}{2\,n_{\text{eff}}\,L} = 1.2\ \text{THz}$$
+```math
+\Delta f = \frac{c}{2\,n_{\text{eff}}\,L} = 1.2\ \text{THz}
+```
 
-$$\therefore\ L = \frac{c / (2\,n_{\text{eff}})}{1.2\ \text{THz}} = 36\ \mu m$$
+```math
+\therefore\ L = \frac{c / (2\,n_{\text{eff}})}{1.2\ \text{THz}} = 36\ \mu m
+```
 
 ---
 
 ## Laser Performance Parameters
 
-- $\lambda_o\ (\mu m)$ = lasing wavelength $\left( \lambda_o = \dfrac{1.24}{E_g\,(\text{eV})} \right)$
-- $I_{th}\ (\text{mA})$ = threshold pump current for stimulated emission (@ $\lambda_o$)
-- $P_{out}\ (\text{mW})$ = CW output power
-- $\text{OSNR}$ = Optical Signal-to-Noise Ratio. Here the noise is due to spontaneous emission.
-- $dI_{th}/dT$ = Temperature coefficient of $I_{th}$. (Usually $> 0$.)
+- $`\lambda_o\ (\mu m)`$ = lasing wavelength $`\left( \lambda_o = \dfrac{1.24}{E_g\,(\text{eV})} \right)`$
+- $`I_{th}\ (\text{mA})`$ = threshold pump current for stimulated emission (@ $`\lambda_o`$)
+- $`P_{out}\ (\text{mW})`$ = CW output power
+- $`\text{OSNR}`$ = Optical Signal-to-Noise Ratio. Here the noise is due to spontaneous emission.
+- $`dI_{th}/dT`$ = Temperature coefficient of $`I_{th}`$. (Usually $`> 0`$.)
 
 ---
 
 ## DC-Interfaced MZI Modulator
 
-Consider the utilization of a pair of 50–50 directional couplers $\text{DC}_1$ & $\text{DC}_2$ to interface the MZI phase shifter as shown. The directional couplers replace the **Y-branch** input splitter and output combiner normally used.
+Consider the utilization of a pair of 50–50 directional couplers $`\text{DC}_1`$ & $`\text{DC}_2`$ to interface the MZI phase shifter as shown. The directional couplers replace the **Y-branch** input splitter and output combiner normally used.
 
 ![Fig 3 — DC-interfaced MZI modulator schematic](figures/18/fig03-mzi-schematic.png)
 
-*Fig 3. DC-interfaced MZI modulator: directional couplers $\text{DC}_1$, $\text{DC}_2$ with phase shifter ($V_{IN}$) between equal-length arms.*
+*Fig 3. DC-interfaced MZI modulator: directional couplers $`\text{DC}_1`$, $`\text{DC}_2`$ with phase shifter ($`V_{IN}`$) between equal-length arms.*
 
-The input $V_{IN}$ introduces a relative phase difference ($\Delta\phi$) between the two equal-length ($L$) arms of the MZI (center).
+The input $`V_{IN}`$ introduces a relative phase difference ($`\Delta\phi`$) between the two equal-length ($`L`$) arms of the MZI (center).
 
-We seek to determine the outputs $b_1, b_2$ in terms of inputs $a_1, a_2$.
+We seek to determine the outputs $`b_1, b_2`$ in terms of inputs $`a_1, a_2`$.
 
-**$\text{DC}_2$ & $\text{DC}_1$:**
+**$`\text{DC}_2`$ & $`\text{DC}_1`$:**
 
-$$(1)\quad \begin{pmatrix} b_1 \\ b_2 \end{pmatrix} = \frac{e^{-j\beta\ell}}{\sqrt{2}} \begin{pmatrix} 1 & -j \\ -j & 1 \end{pmatrix} \begin{pmatrix} d_1 \\ d_2 \end{pmatrix} \qquad (2)\quad \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \frac{e^{-j\beta\ell}}{\sqrt{2}} \begin{pmatrix} 1 & -j \\ -j & 1 \end{pmatrix} \begin{pmatrix} a_1 \\ a_2 \end{pmatrix}$$
+```math
+(1)\quad \begin{pmatrix} b_1 \\ b_2 \end{pmatrix} = \frac{e^{-j\beta\ell}}{\sqrt{2}} \begin{pmatrix} 1 & -j \\ -j & 1 \end{pmatrix} \begin{pmatrix} d_1 \\ d_2 \end{pmatrix} \qquad (2)\quad \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \frac{e^{-j\beta\ell}}{\sqrt{2}} \begin{pmatrix} 1 & -j \\ -j & 1 \end{pmatrix} \begin{pmatrix} a_1 \\ a_2 \end{pmatrix}
+```
 
 **Phase shifter:**
 
-$$(3)\quad \begin{pmatrix} d_1 \\ d_2 \end{pmatrix} = \begin{pmatrix} e^{-j\phi_1} & 0 \\ 0 & e^{-j\phi_2} \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix}$$
+```math
+(3)\quad \begin{pmatrix} d_1 \\ d_2 \end{pmatrix} = \begin{pmatrix} e^{-j\phi_1} & 0 \\ 0 & e^{-j\phi_2} \end{pmatrix} \begin{pmatrix} c_1 \\ c_2 \end{pmatrix}
+```
 
 **Using (1) & (2):**
 
-$$\begin{pmatrix} b_1 \\ b_2 \end{pmatrix} = \left(\frac{e^{-j\beta\ell}}{\sqrt{2}}\right)^{2} \begin{pmatrix} 1 & -j \\ -j & 1 \end{pmatrix} \begin{pmatrix} e^{-j\phi_1} & 0 \\ 0 & e^{-j\phi_2} \end{pmatrix} \begin{pmatrix} 1 & -j \\ -j & 1 \end{pmatrix} \begin{pmatrix} a_1 \\ a_2 \end{pmatrix}$$
+```math
+\begin{pmatrix} b_1 \\ b_2 \end{pmatrix} = \left(\frac{e^{-j\beta\ell}}{\sqrt{2}}\right)^{2} \begin{pmatrix} 1 & -j \\ -j & 1 \end{pmatrix} \begin{pmatrix} e^{-j\phi_1} & 0 \\ 0 & e^{-j\phi_2} \end{pmatrix} \begin{pmatrix} 1 & -j \\ -j & 1 \end{pmatrix} \begin{pmatrix} a_1 \\ a_2 \end{pmatrix}
+```
 
-Define $[H]$ as the system **Transfer Function** matrix, $\begin{pmatrix} b_1 \\ b_2 \end{pmatrix} = [H] \begin{pmatrix} a_1 \\ a_2 \end{pmatrix}$, where $[H] = \begin{pmatrix} H_{11} & H_{12} \\ H_{21} & H_{22} \end{pmatrix}$.
+Define $`[H]`$ as the system **Transfer Function** matrix, $`\begin{pmatrix} b_1 \\ b_2 \end{pmatrix} = [H] \begin{pmatrix} a_1 \\ a_2 \end{pmatrix}`$, where $`[H] = \begin{pmatrix} H_{11} & H_{12} \\ H_{21} & H_{22} \end{pmatrix}`$.
 
-$$H_{11} = \frac{e^{-j2\beta\ell}}{2}\left(e^{-j\phi_1} - e^{-j\phi_2}\right) \qquad H_{12} = -\frac{j}{2}\,e^{-j2\beta\ell}\left(e^{-j\phi_1} + e^{-j\phi_2}\right)$$
+```math
+H_{11} = \frac{e^{-j2\beta\ell}}{2}\left(e^{-j\phi_1} - e^{-j\phi_2}\right) \qquad H_{12} = -\frac{j}{2}\,e^{-j2\beta\ell}\left(e^{-j\phi_1} + e^{-j\phi_2}\right)
+```
 
-$$H_{21} = -\frac{j}{2}\,e^{-j2\beta\ell}\left(e^{-j\phi_1} + e^{-j\phi_2}\right) \qquad H_{22} = -\frac{e^{-j2\beta\ell}}{2}\left(e^{-j\phi_1} - e^{-j\phi_2}\right)$$
+```math
+H_{21} = -\frac{j}{2}\,e^{-j2\beta\ell}\left(e^{-j\phi_1} + e^{-j\phi_2}\right) \qquad H_{22} = -\frac{e^{-j2\beta\ell}}{2}\left(e^{-j\phi_1} - e^{-j\phi_2}\right)
+```
 
 ---
 
@@ -108,39 +138,53 @@ $$H_{21} = -\frac{j}{2}\,e^{-j2\beta\ell}\left(e^{-j\phi_1} + e^{-j\phi_2}\right
 
 ![Fig 4 — Single-in operation of the MZI modulator](figures/18/fig04-single-in.png)
 
-*Fig 4. Single-in operation: input $I_n$ on the top arm, the other input grounded ($0$); outputs $\text{Out}_1$, $\text{Out}_2$; modulation via $V_{IN}$.*
+*Fig 4. Single-in operation: input $`I_n`$ on the top arm, the other input grounded ($`0`$); outputs $`\text{Out}_1`$, $`\text{Out}_2`$; modulation via $`V_{IN}`$.*
 
 ### "Cross"
 
-$$\frac{\text{Out}_2}{I_n} = \frac{b_2}{a_1} = H_{21} = -\frac{j}{2}\,e^{-j2\beta\ell}\left(e^{-j\phi_1} + e^{-j\phi_2}\right)$$
+```math
+\frac{\text{Out}_2}{I_n} = \frac{b_2}{a_1} = H_{21} = -\frac{j}{2}\,e^{-j2\beta\ell}\left(e^{-j\phi_1} + e^{-j\phi_2}\right)
+```
 
-$$\frac{P_{out_2}}{P_{in}} = |H_{21}|^2 = \frac{1}{2}\left(e^{-j\phi_1} + e^{-j\phi_2}\right)\left(\ \cdots\ \right)^{*} = \cdots$$
+```math
+\frac{P_{out_2}}{P_{in}} = |H_{21}|^2 = \frac{1}{2}\left(e^{-j\phi_1} + e^{-j\phi_2}\right)\left(\ \cdots\ \right)^{*} = \cdots
+```
 
-$$\therefore\ \frac{P_{out_2}}{P_{in}} = \frac{1}{2}\left(1 + \cos\Delta\phi\right) \qquad \Delta\phi = \phi_1 - \phi_2 = \pi\,\frac{V_{IN}}{V_{\pi}}$$
+```math
+\therefore\ \frac{P_{out_2}}{P_{in}} = \frac{1}{2}\left(1 + \cos\Delta\phi\right) \qquad \Delta\phi = \phi_1 - \phi_2 = \pi\,\frac{V_{IN}}{V_{\pi}}
+```
 
 ![Fig 5 — Cross output power transfer characteristic](figures/18/fig05-cross-plot.png)
 
-*Fig 5. $P_{out_2}/P_{in}$ vs. $\Delta\phi$ (i.e. $V_{IN}$). $\text{Out}_2$ is maximum (= 1) at $\Delta\phi = 0,\ 2\pi$ and zero at $\Delta\phi = \pi$ ($V_{IN} = V_{\pi}$). Operating point (O.P.) at 0.5.*
+*Fig 5. $`P_{out_2}/P_{in}`$ vs. $`\Delta\phi`$ (i.e. $`V_{IN}`$). $`\text{Out}_2`$ is maximum (= 1) at $`\Delta\phi = 0,\ 2\pi`$ and zero at $`\Delta\phi = \pi`$ ($`V_{IN} = V_{\pi}`$). Operating point (O.P.) at 0.5.*
 
 **Applications:** 1) Tuneable BSF · 2) OOK modulator (inverting)
 
 ### "Direct"
 
-$$\frac{\text{Out}_1}{I_n} = \frac{b_1}{a_1} = H_{11} = \frac{e^{-j2\beta\ell}}{2}\left(e^{-j\phi_1} - e^{-j\phi_2}\right)$$
+```math
+\frac{\text{Out}_1}{I_n} = \frac{b_1}{a_1} = H_{11} = \frac{e^{-j2\beta\ell}}{2}\left(e^{-j\phi_1} - e^{-j\phi_2}\right)
+```
 
-$$\frac{P_{out_1}}{P_{in}} = |H_{11}|^2 = \frac{1}{2}\left(e^{-j\phi_1} - e^{-j\phi_2}\right)\left(\ \cdots\ \right)^{*} = \cdots$$
+```math
+\frac{P_{out_1}}{P_{in}} = |H_{11}|^2 = \frac{1}{2}\left(e^{-j\phi_1} - e^{-j\phi_2}\right)\left(\ \cdots\ \right)^{*} = \cdots
+```
 
-$$\therefore\ \frac{P_{out_1}}{P_{in}} = \frac{1}{2}\left(1 - \cos\Delta\phi\right) \qquad \Delta\phi = \pi\,\frac{V_{IN}}{V_{\pi}}$$
+```math
+\therefore\ \frac{P_{out_1}}{P_{in}} = \frac{1}{2}\left(1 - \cos\Delta\phi\right) \qquad \Delta\phi = \pi\,\frac{V_{IN}}{V_{\pi}}
+```
 
 ![Fig 6 — Direct output power transfer characteristic](figures/18/fig06-direct-plot.png)
 
-*Fig 6. $P_{out_1}/P_{in}$ vs. $\Delta\phi$ (i.e. $V_{IN}$). $\text{Out}_1$ is zero at $\Delta\phi = 0,\ 2\pi$ and maximum (= 1) at $\Delta\phi = \pi$ ($V_{IN} = V_{\pi}$). Operating point (O.P.) at 0.5.*
+*Fig 6. $`P_{out_1}/P_{in}`$ vs. $`\Delta\phi`$ (i.e. $`V_{IN}`$). $`\text{Out}_1`$ is zero at $`\Delta\phi = 0,\ 2\pi`$ and maximum (= 1) at $`\Delta\phi = \pi`$ ($`V_{IN} = V_{\pi}`$). Operating point (O.P.) at 0.5.*
 
 **Application:** 1) OOK modulator (see O.P.) · 2. Tuneable BPF
 
 **Lossless P-transfer:** Note conservation of power:
 
-$$\frac{P_{out_1}}{P_{in}} + \frac{P_{out_2}}{P_{in}} = 1 \quad\rightarrow\quad P_{out_1} + P_{out_2} = P_{in}$$
+```math
+\frac{P_{out_1}}{P_{in}} + \frac{P_{out_2}}{P_{in}} = 1 \quad\rightarrow\quad P_{out_1} + P_{out_2} = P_{in}
+```
 
 ---
 
@@ -164,11 +208,11 @@ As we shall see, optical amplifiers, like lasers, are also based on **"stimulate
 
 ## Semiconductor Optical Amplifier (SOA)
 
-Similar to a laser diode, an SOA employs a semiconductor **gain (amplifying) medium**. However, an SOA operates **just below threshold** ($I \lesssim I_{th}$) to avoid laser oscillations, but takes advantage of amplification (by stimulated emission) of a weak optical information signal requiring additional amplification. The close-to-threshold operation is depicted in the Figure below.
+Similar to a laser diode, an SOA employs a semiconductor **gain (amplifying) medium**. However, an SOA operates **just below threshold** ($`I \lesssim I_{th}`$) to avoid laser oscillations, but takes advantage of amplification (by stimulated emission) of a weak optical information signal requiring additional amplification. The close-to-threshold operation is depicted in the Figure below.
 
 ![Fig 7 — Operation as an SOA requires I ≤ I_th](figures/18/fig07-soa-operation.png)
 
-*Fig 7. Operation as an SOA requires $I \lesssim I_{th}$ (below the lasing threshold).*
+*Fig 7. Operation as an SOA requires $`I \lesssim I_{th}`$ (below the lasing threshold).*
 
 The principle of operation of an SOA is depicted in the Figure below. Here, with the aid of optical lenses, the optical information signal arriving through an input fiber enters the **"gain medium"** of the SOA at left. The same optical signal, following amplification by the gain medium, exits at right and is properly coupled into the output fiber.
 
@@ -198,9 +242,11 @@ This type of SOA has the exact same configuration as the **Fabry–Perot laser**
 
 *Fig 10. Laser diode vs. Fabry–Perot laser amplifier. The amplifier replaces the partial mirror facets with anti-reflection coatings.*
 
-To ensure absence of oscillations, the SOA is made to have very low reflectance ($\sim 10^{-4}$) at its two **"facets"** — for e.g. through use of anti-reflection coating. The low reflectance ensures losses exceeding gain in the active medium, i.e.:
+To ensure absence of oscillations, the SOA is made to have very low reflectance ($`\sim 10^{-4}`$) at its two **"facets"** — for e.g. through use of anti-reflection coating. The low reflectance ensures losses exceeding gain in the active medium, i.e.:
 
-$$G_{+}\,G_{-} < \frac{1}{\sqrt{R_1 R_2}}$$
+```math
+G_{+}\,G_{-} < \frac{1}{\sqrt{R_1 R_2}}
+```
 
 The principle of operation of an FPLA is depicted in the Figure below. It is similar to a **+FB electronic amplifier** (see Appendix-0).
 
@@ -216,7 +262,7 @@ Here the input optical information signal is amplified by a **single pass** thro
 
 *Fig 12. Principle of operation of TWSLA.*
 
-To keep the signal **"clean"**, cavity resonance must be suppressed by ensuring very low reflectance ($\sim 10^{-4}$) at the ends of the device. A common technique for achieving this is through use of **antireflection (AR) coating**. This is shown in the Figure below.
+To keep the signal **"clean"**, cavity resonance must be suppressed by ensuring very low reflectance ($`\sim 10^{-4}`$) at the ends of the device. A common technique for achieving this is through use of **antireflection (AR) coating**. This is shown in the Figure below.
 
 ![Fig 13 — TWSLA using AR coating](figures/18/fig13-twsla-ar.png)
 
@@ -224,7 +270,7 @@ To keep the signal **"clean"**, cavity resonance must be suppressed by ensuring 
 
 ### SOA Performance Parameters
 
-- **$P_{out}$:** output power ($\sim 5\text{–}10\ \text{mW}$)
+- **$`P_{out}`$:** output power ($`\sim 5\text{–}10\ \text{mW}`$)
 - **gain:** power gain of SOA (as function of input power)
 - **Bandwidth:** optical bandwidth is determined by the gain bandwidth
 - **Polarization:** input light polarization affects SOA performance
@@ -250,7 +296,7 @@ EDFAs are used as a **booster**, **inline**, and **pre-amplifier** in an optical
 
 Before the invention of EDFA, a long optical fiber transmission line required a complicated optical-to-electrical (O–E) and E–O converter for signal regeneration. The use of EDFA has eliminated the need for such O–E and E–O conversion, significantly simplifying the system. This is especially of use in a submarine optical transmission, where more than a hundred EDFA repeaters may be needed to construct one link.\* The **TPC-5CN** (Trans-Pacific Cable 5 Cable Network), started its operation in 1996, is the first submarine optical fiber network which employed EDFA.
 
-> \* $\sim 1000\text{'s km}$.
+> \* $`\sim 1000\text{'s km}`$.
 
 ### Working principle
 
@@ -295,45 +341,55 @@ As we shall see, the boost in gain is achieved at the cost of amplifier **bandwi
 
 ![Fig 18 — A +FB (Regenerative) amplifier](figures/18/fig18-regen-amp.png)
 
-*Fig 18. A +FB (Regenerative) amplifier. $A$ = gain of amplifier, $\beta$ = feedback network.*
+*Fig 18. A +FB (Regenerative) amplifier. $`A`$ = gain of amplifier, $`\beta`$ = feedback network.*
 
-**Analysis:** $H(j\omega) = V_o / V_i$ — Closed-loop (C.L.) gain.
+**Analysis:** $`H(j\omega) = V_o / V_i`$ — Closed-loop (C.L.) gain.
 
-$$(1)\quad V_o = A\,(V_i + V_{FB}) \qquad (2)\quad V_{FB} = \beta\,V_o$$
+```math
+(1)\quad V_o = A\,(V_i + V_{FB}) \qquad (2)\quad V_{FB} = \beta\,V_o
+```
 
-$(2) \rightarrow (1):\quad V_o = A\,(V_i + \beta\,V_o)$
+$`(2) \rightarrow (1):\quad V_o = A\,(V_i + \beta\,V_o)`$
 
-**Solving for $H$:**
+**Solving for $`H`$:**
 
-$$H = \frac{V_o}{V_i} = \frac{A}{1 - A\beta} \qquad \begin{cases} A\beta < 1 \ \cdots\ H > A \quad (\text{amplifier}) \\ A\beta = 1 \ \cdots\ H \rightarrow \infty \quad (\text{oscillator}) \end{cases}$$
+```math
+H = \frac{V_o}{V_i} = \frac{A}{1 - A\beta} \qquad \begin{cases} A\beta < 1 \ \cdots\ H > A \quad (\text{amplifier}) \\ A\beta = 1 \ \cdots\ H \rightarrow \infty \quad (\text{oscillator}) \end{cases}
+```
 
 ![Fig 19 — Closed-loop gain H vs. feedback factor β](figures/18/fig19-h-beta-plots.png)
 
-*Fig 19. Closed-loop gain $H$ vs. feedback factor $\beta$, showing the amplifier and oscillator regions. (Left) general behaviour; (right) example with $A = 10^4$, where the amplifier/oscillator boundary occurs at $\beta = 10^{-4}$.*
+*Fig 19. Closed-loop gain $`H`$ vs. feedback factor $`\beta`$, showing the amplifier and oscillator regions. (Left) general behaviour; (right) example with $`A = 10^4`$, where the amplifier/oscillator boundary occurs at $`\beta = 10^{-4}`$.*
 
-**Example:** $A = 10^4$
+**Example:** $`A = 10^4`$
 
-$$\begin{cases} \text{Oscillator:} & A\beta \ge 1 \ \cdots\ \beta \ge 10^{-4} \\ \text{Amplifier:} & A\beta < 1 \ \cdots\ \beta < 10^{-4} \end{cases}$$
+```math
+\begin{cases} \text{Oscillator:} & A\beta \ge 1 \ \cdots\ \beta \ge 10^{-4} \\ \text{Amplifier:} & A\beta < 1 \ \cdots\ \beta < 10^{-4} \end{cases}
+```
 
 C.L. amplification **exceeding** the amplifier gain is possible by regenerative FB.
 
 ### Bandwidth Narrowing
 
-$$A(j\omega) = \frac{A_o}{1 + j\frac{\omega}{\omega_o}} \qquad \begin{cases} \omega_o = \text{3-dB BW} \\ A_o = \text{DC gain} \end{cases}$$
+```math
+A(j\omega) = \frac{A_o}{1 + j\frac{\omega}{\omega_o}} \qquad \begin{cases} \omega_o = \text{3-dB BW} \\ A_o = \text{DC gain} \end{cases}
+```
 
-$$\therefore\ H = \frac{A}{1 - A\beta} = \frac{A_o}{1 + j\frac{\omega}{\omega_o} - A_o\beta} = \frac{H_o}{1 + j\frac{\omega}{\Omega_o}} \cdots$$
+```math
+\therefore\ H = \frac{A}{1 - A\beta} = \frac{A_o}{1 + j\frac{\omega}{\omega_o} - A_o\beta} = \frac{H_o}{1 + j\frac{\omega}{\Omega_o}} \cdots
+```
 
-- **C.L. 3-dB BW:** $\quad \Omega_o = \omega_o\,(1 - A_o\beta) < \omega_o$
-- **C.L. DC Gain:** $\quad H_o = \dfrac{A_o}{1 - A_o\beta}$
+- **C.L. 3-dB BW:** $`\quad \Omega_o = \omega_o\,(1 - A_o\beta) < \omega_o`$
+- **C.L. DC Gain:** $`\quad H_o = \dfrac{A_o}{1 - A_o\beta}`$
 
 ![Fig 20 — Closed-loop gain vs. angular frequency (bandwidth narrowing)](figures/18/fig20-gain-bw.png)
 
-*Fig 20. Closed-loop gain vs. angular frequency. The DC gain rises from $A_o$ to $H_o$ while the bandwidth narrows from $\omega_o$ to $\Omega_o$.*
+*Fig 20. Closed-loop gain vs. angular frequency. The DC gain rises from $`A_o`$ to $`H_o`$ while the bandwidth narrows from $`\omega_o`$ to $`\Omega_o`$.*
 
 **Properties:**
 
-1. **Gain × BW conservation:** $\quad H_o\,\Omega_o = A_o\,\omega_o$
-2. **Gain–BW Tradeoff:** $\quad H_o\,\Omega_o = \text{constant}$
+1. **Gain × BW conservation:** $`\quad H_o\,\Omega_o = A_o\,\omega_o`$
+2. **Gain–BW Tradeoff:** $`\quad H_o\,\Omega_o = \text{constant}`$
 
 ---
 

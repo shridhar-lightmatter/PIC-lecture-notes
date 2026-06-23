@@ -13,7 +13,7 @@
   - Scientific applications
 - Increasing clock frequency is not possible, as it increases power dissipation
 
-$\Rightarrow$ **Solution: Core-level parallelism** — distribute tasks to multiple cores.*
+$`\Rightarrow`$ **Solution: Core-level parallelism** — distribute tasks to multiple cores.*
 
 > \* Aka **CMP** ("Chip Multi-Processor").
 
@@ -30,7 +30,7 @@ $\Rightarrow$ **Solution: Core-level parallelism** — distribute tasks to multi
 
 *Fig 1. Traditional bus-based interconnect: IP blocks tied to a shared system bus. (IP: Integrated Processor.)*
 
-$\Rightarrow$ **Solution:** a scalable interconnect infrastructure for communication.
+$`\Rightarrow`$ **Solution:** a scalable interconnect infrastructure for communication.
 
 ---
 
@@ -78,7 +78,7 @@ $\Rightarrow$ **Solution:** a scalable interconnect infrastructure for communica
 
 *Fig 4. 2D torus: a mesh with wrap-around links at the edges.*
 
-- Long links $\rightarrow$ high delay and high power dissipation.
+- Long links $`\rightarrow`$ high delay and high power dissipation.
 
 ---
 
@@ -114,7 +114,7 @@ A **fixed network** is a wavelength-selective passive optical network possessing
 
 ### Switching Networks
 
-Here, the routing pattern is dynamic and is set through a separate electronically-controlled network. In comparison, the "fixed network" appears to have lower latency due to its passive nature. This suggests that the time it takes to select a specific wavelength is shorter than the time required for configuring the "switching network". However, because the switching network has the ability to accommodate multiple-wavelength WDM signals, it has a superior aggregate bandwidth. Furthermore, the switching network generally has a compact footprint and better scalability. Finally, while a PON network requires a multiplicity of laser sources/wavelengths (one per channel), a switched network can operate on a single $\lambda$, calling for a single laser source.
+Here, the routing pattern is dynamic and is set through a separate electronically-controlled network. In comparison, the "fixed network" appears to have lower latency due to its passive nature. This suggests that the time it takes to select a specific wavelength is shorter than the time required for configuring the "switching network". However, because the switching network has the ability to accommodate multiple-wavelength WDM signals, it has a superior aggregate bandwidth. Furthermore, the switching network generally has a compact footprint and better scalability. Finally, while a PON network requires a multiplicity of laser sources/wavelengths (one per channel), a switched network can operate on a single $`\lambda`$, calling for a single laser source.
 
 Since a Chip Multiprocessor (CMP) typically consists of a 2-D array (grid) of identical general-purpose processors, it follows that photonic networks for CMPs would also employ a 2-D regular topology. Two such topologies are shown in **Fig 1**: a) Mesh and b) Torus.
 
@@ -122,7 +122,7 @@ Since a Chip Multiprocessor (CMP) typically consists of a 2-D array (grid) of id
 
 *Fig 1. Schematics of 2-D ×16 multi-core CMPs with topologies: (a) mesh, (b) torus. A photonic router is shown in (c) (with Processor / North–East–South–West ports).*
 
-Note that each link b/w routers — as well as b/w a processor and a router — is composed of two "directional" waveguides for two-way communications. Also note the five directional ports of the optical router (to 4 adjacent routers) plus one O-E/E-O connection to a processor. An opto-electronic / electro-optical interface circuit is shown in detail in **Fig 2**. Note that a serializer and deserializer are needed on the $T_x$ side & $R_x$ side, respectively.
+Note that each link b/w routers — as well as b/w a processor and a router — is composed of two "directional" waveguides for two-way communications. Also note the five directional ports of the optical router (to 4 adjacent routers) plus one O-E/E-O connection to a processor. An opto-electronic / electro-optical interface circuit is shown in detail in **Fig 2**. Note that a serializer and deserializer are needed on the $`T_x`$ side & $`R_x`$ side, respectively.
 
 ![Fig 7 — E-O and O-E interface circuits](figures/22/fig07-eo-oe-interface.png)
 
@@ -146,15 +146,15 @@ Light signals travelling over WGs may be switched b/w two WGs using an **MRR-bas
 
 *Fig 3. MRR-based switch element: parallel (a) & intersecting (b) waveguides, each shown in ON and OFF states.*
 
-We turn next to the design of the photonic routers to be employed in the NOC. As these are many (e.g. 16 in Fig 1), an area-efficient switching element must be employed for integration on a Si-chip: a microring-resonator (MRR) based switch. Its small size* (radius, $R \sim$ few $\mu$m's) makes it suitable for integration in large numbers to build routers.
+We turn next to the design of the photonic routers to be employed in the NOC. As these are many (e.g. 16 in Fig 1), an area-efficient switching element must be employed for integration on a Si-chip: a microring-resonator (MRR) based switch. Its small size* (radius, $`R \sim`$ few $`\mu`$m's) makes it suitable for integration in large numbers to build routers.
 
-> \* Size considerations rule out a Mach–Zehnder-based switch. Recall a typical MZI requires $\sim$1 mm (1000 $\mu$m's)!
+> \* Size considerations rule out a Mach–Zehnder-based switch. Recall a typical MZI requires $`\sim`$1 mm (1000 $`\mu`$m's)!
 
 ### Example
 
 Shown in **Fig 4** is the schematic layout of a five-port on-chip optical router. It contains 16 (identical) MRR, and 14 crossings.* All microrings are activated (switched) employing microheaters. For the sake of simplicity, the network of microheaters has been omitted.
 
-In addition to single-$\lambda$ operation (@ 1.5 $\mu$m), the router can operate w/ a WDM signal w/ channel-spacing equal to the FSR of the MRR.
+In addition to single-$`\lambda`$ operation (@ 1.5 $`\mu`$m), the router can operate w/ a WDM signal w/ channel-spacing equal to the FSR of the MRR.
 
 **Important:** Router operation must avoid malfunction occurring due to "contentions" or "blockings".
 
@@ -174,13 +174,13 @@ In addition to single-$\lambda$ operation (@ 1.5 $\mu$m), the router can operate
 | **North**  | R16 | R14 | None | — | R15 |
 | **Center** | R10 | R9 | R7 | R3 | — |
 
-Examining Fig 4 reveals that there are 20 possible optical links or light-paths: 5 input ports × 4 output ports ("self-links" excluded). In Table 1, the MRR switch element controlling each link has been labeled $R_j$ ($j = 1, \ldots, 16$). Here, "none" implies no switch necessary.
+Examining Fig 4 reveals that there are 20 possible optical links or light-paths: 5 input ports × 4 output ports ("self-links" excluded). In Table 1, the MRR switch element controlling each link has been labeled $`R_j`$ ($`j = 1, \ldots, 16`$). Here, "none" implies no switch necessary.
 
 It is noteworthy that:
 
 1. "Port-to-itself" links are absent.
 2. To economize with # MRR switches (chip area) and power consumption, one of each of the remaining four destinations is made permanent — thereby not requiring an MRR switch. This is labeled in Table 1 as "none".
-3. All MRRs used are identical (radius = 10 $\mu$m, and 0.22 $\mu$m gaps to WGs).
+3. All MRRs used are identical (radius = 10 $`\mu`$m, and 0.22 $`\mu`$m gaps to WGs).
 
 It is instructive for the reader, as an exercise, to verify to their satisfaction the detailed switching function of the router (Table 1).
 
@@ -200,17 +200,17 @@ If some in–out interconnection pattern cannot be realized, the router is terme
 
 ## Fabrication
 
-The photonic NOC comprising the interconnected routers is fabricated in the **SOI** platform for compatibility with the CMOS process used to fabricate the multi-core processors (CMP). A crossection of the SOI platform is given in **Fig 5**. Here, the top 220 nm Si layer is employed for patterning the MRRs & optical waveguides (links), as well as transistors (MOSFETs). On top of a 1 $\mu$m layer of SiO$_2$ cladding, deposited is a Titanium heater pattern.
+The photonic NOC comprising the interconnected routers is fabricated in the **SOI** platform for compatibility with the CMOS process used to fabricate the multi-core processors (CMP). A crossection of the SOI platform is given in **Fig 5**. Here, the top 220 nm Si layer is employed for patterning the MRRs & optical waveguides (links), as well as transistors (MOSFETs). On top of a 1 $`\mu`$m layer of SiO$`_2`$ cladding, deposited is a Titanium heater pattern.
 
 ![Fig 10 — SOI cross-section used for routers](figures/22/fig10-soi-crosssection.png)
 
-*Fig 5. Cross-section of SOI platform used for routers: Ti heater on 1 $\mu$m SiO$_2$ oxide; 220 nm Si device layer; 2 $\mu$m SiO$_2$ buried oxide; $\approx$ 250 $\mu$m Si substrate.*
+*Fig 5. Cross-section of SOI platform used for routers: Ti heater on 1 $`\mu`$m SiO$`_2`$ oxide; 220 nm Si device layer; 2 $`\mu`$m SiO$`_2`$ buried oxide; $`\approx`$ 250 $`\mu`$m Si substrate.*
 
-One of the MRR-based routers is shown in **Fig 6**. The white (aluminum) traces are used for implementing pads and interconnects to deliver electric power to the Ti microheaters positioned directly above microrings. Note the orientation of the "West" port in relation to the remaining four ports: "Center, North, East, and South". The size of the chip is about $400 \times 600$ ($\mu$m)$^2$. The chip size is influenced in part by the distancing of adjacent ring heaters for minimizing thermal crosstalk.
+One of the MRR-based routers is shown in **Fig 6**. The white (aluminum) traces are used for implementing pads and interconnects to deliver electric power to the Ti microheaters positioned directly above microrings. Note the orientation of the "West" port in relation to the remaining four ports: "Center, North, East, and South". The size of the chip is about $`400 \times 600`$ ($`\mu`$m)$`^2`$. The chip size is influenced in part by the distancing of adjacent ring heaters for minimizing thermal crosstalk.
 
 ![Fig 11 — Micrograph of the five-port optical router](figures/22/fig11-router-micrograph.png)
 
-*Fig 6. Micrograph of the five-port optical router based on silicon MRRs (pads visible; scale bar ≈ 120 $\mu$m).*
+*Fig 6. Micrograph of the five-port optical router based on silicon MRRs (pads visible; scale bar ≈ 120 $`\mu`$m).*
 
 ---
 
@@ -266,7 +266,7 @@ Offices tend to interconnect computers with a local-area network, sometimes call
 
 *Figure 8.18. Star (top), bus (middle), and ring (bottom) architectures for interconnecting nodes in a local-area network (LAN).*
 
-**Ring architecture.** Each node connects to its two neighboring nodes so all the nodes form a loop. The data packets flow around the loop in one direction, and each node receives and processes the data. If the packet destination address corresponds to the node address, the node accepts the packet, removes it from the ring, and transmits an acknowledgment. If the packet destination address does not match the node address, the node transmits the data packet to the next node on the ring. Each node has temporary memory, called a **buffer**. When a node wants to transmit a data packet, it stores incoming data packets in the buffer, while it transmits its own packet. Each data packet also contains the address of the originating node. When a data packet returns to the originating node, it is removed from the ring and transmitted again at a later time. Like the bus architecture, the ring architecture does not require a separate server. The ring performs properly only when all the nodes are operational. One malfunctioning node will cause all two-way communications to cease. When a node is turned off, the communications component disconnects the node by connecting its input directly to the output. Because the data packet may go through all but one of the nodes before reaching its destination, the communication delay depends on the number of nodes in the ring. In a ring containing $N$ nodes, the average communication occurs in $N/2$ hops.
+**Ring architecture.** Each node connects to its two neighboring nodes so all the nodes form a loop. The data packets flow around the loop in one direction, and each node receives and processes the data. If the packet destination address corresponds to the node address, the node accepts the packet, removes it from the ring, and transmits an acknowledgment. If the packet destination address does not match the node address, the node transmits the data packet to the next node on the ring. Each node has temporary memory, called a **buffer**. When a node wants to transmit a data packet, it stores incoming data packets in the buffer, while it transmits its own packet. Each data packet also contains the address of the originating node. When a data packet returns to the originating node, it is removed from the ring and transmitted again at a later time. Like the bus architecture, the ring architecture does not require a separate server. The ring performs properly only when all the nodes are operational. One malfunctioning node will cause all two-way communications to cease. When a node is turned off, the communications component disconnects the node by connecting its input directly to the output. Because the data packet may go through all but one of the nodes before reaching its destination, the communication delay depends on the number of nodes in the ring. In a ring containing $`N`$ nodes, the average communication occurs in $`N/2`$ hops.
 
 #### Wide-Area Network
 

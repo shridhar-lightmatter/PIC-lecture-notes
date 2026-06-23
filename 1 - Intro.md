@@ -123,48 +123,56 @@ The range of distances spanned by these optical waveguides covers both the **mac
 
 #### Snell's Law
 
-As depicted in Fig 1, when light incident at an angle $\theta_1$ passes from an "optically-light" material (low index of refraction $n_1$) to an "optically-dense" material (high index of refraction $n_2$), it always bends *toward* the normal to the boundary plane. The behavior is governed by **Snell's law of refraction**.
+As depicted in Fig 1, when light incident at an angle $`\theta_1`$ passes from an "optically-light" material (low index of refraction $`n_1`$) to an "optically-dense" material (high index of refraction $`n_2`$), it always bends *toward* the normal to the boundary plane. The behavior is governed by **Snell's law of refraction**.
 
 ![Fig 1 — Snell's Law of Refraction](figures/1/fig06-snells-law.png)
 
 *Fig 1. Snell's Law of Refraction.*
 
-$$n_1 \sin\theta_1 = n_2 \sin\theta_2 \qquad \text{(Snell's Law)}$$
+```math
+n_1 \sin\theta_1 = n_2 \sin\theta_2 \qquad \text{(Snell's Law)}
+```
 
 **Notes:**
 
-1. "Index of refraction": $\displaystyle n \triangleq \frac{c}{v}$, where $v$ = light speed in medium and $c$ = light speed in free space.
-2. $\displaystyle c = \frac{1}{\sqrt{\varepsilon_0 \mu_0}}, \quad v = \frac{1}{\sqrt{\varepsilon_r \varepsilon_0 \mu_0}} \;\Rightarrow\; n = \sqrt{\varepsilon_r}$
+1. "Index of refraction": $`\displaystyle n \triangleq \frac{c}{v}`$, where $`v`$ = light speed in medium and $`c`$ = light speed in free space.
+2. $`\displaystyle c = \frac{1}{\sqrt{\varepsilon_0 \mu_0}}, \quad v = \frac{1}{\sqrt{\varepsilon_r \varepsilon_0 \mu_0}} \;\Rightarrow\; n = \sqrt{\varepsilon_r}`$
 
 #### Total Internal Reflection
 
-When light passes from an optically "dense" material into an optically "light" material, a specific **critical angle** ($\theta_c$) exists above which there is **no** light transmission into the optically "light" material. Importantly, $\theta_c$ is the angle of incidence at which the refracted light travels along the "boundary interface" (Fig 2).
+When light passes from an optically "dense" material into an optically "light" material, a specific **critical angle** ($`\theta_c`$) exists above which there is **no** light transmission into the optically "light" material. Importantly, $`\theta_c`$ is the angle of incidence at which the refracted light travels along the "boundary interface" (Fig 2).
 
-For angles of incidence $\theta > \theta_c$, the light is **totally reflected** back so as to remain confined to the optically-denser material. This phenomenon of **total internal reflection (TIR)** is the basis for operation of optical fibers and guides.
+For angles of incidence $`\theta > \theta_c`$, the light is **totally reflected** back so as to remain confined to the optically-denser material. This phenomenon of **total internal reflection (TIR)** is the basis for operation of optical fibers and guides.
 
-By definition $\theta_2 = 90°$ when $\theta_1 = \theta_c$, for which, using Snell's law:
+By definition $`\theta_2 = 90°`$ when $`\theta_1 = \theta_c`$, for which, using Snell's law:
 
-$$\theta_c = \arcsin\!\left(\frac{n_2}{n_1}\right) \qquad \text{(critical angle)}$$
+```math
+\theta_c = \arcsin\!\left(\frac{n_2}{n_1}\right) \qquad \text{(critical angle)}
+```
 
 ![Fig 2 — Total Internal Reflection, θ₁ > θc](figures/1/fig07-total-internal-reflection.png)
 
-*Fig 2. "Total Internal Reflection", $\theta_1 > \theta_c$.*
+*Fig 2. "Total Internal Reflection", $`\theta_1 > \theta_c`$.*
 
 **Example:**
 
-1. Consider the glass–air interface for which $n_1 \approx 1.5$ (glass) and $n_2 = 1.0$ (air). Find $\theta_c$.
+1. Consider the glass–air interface for which $`n_1 \approx 1.5`$ (glass) and $`n_2 = 1.0`$ (air). Find $`\theta_c`$.
 
-$$\theta_c = \arcsin\!\left(\frac{1.0}{1.5}\right) = 41.8°$$
+```math
+\theta_c = \arcsin\!\left(\frac{1.0}{1.5}\right) = 41.8°
+```
 
-2. Consider the silica-core/cladding interface in an optical fiber. Here $n_1 = 1.48$ (silica) and $n_2 = 1.44$ (cladding). Find $\theta_c$.
+2. Consider the silica-core/cladding interface in an optical fiber. Here $`n_1 = 1.48`$ (silica) and $`n_2 = 1.44`$ (cladding). Find $`\theta_c`$.
 
-$$\theta_c = \arcsin\!\left(\frac{1.44}{1.48}\right) = 76.6°$$
+```math
+\theta_c = \arcsin\!\left(\frac{1.44}{1.48}\right) = 76.6°
+```
 
 ### 2. Structure & Characteristics
 
 Typically, an optical fiber is composed of three concentric layers: a **fiber core** at center, a surrounding **cladding**, and an outer **buffer jacket** (coating) made of hard plastic. This jacket provides mechanical protection and flexibility to the fiber (Fig 3).
 
-The fiber core and cladding are made of silica ($\text{SiO}_2$) glass, with a higher refractive index for the core than the cladding to guarantee **total internal reflection** in the core — and hence the guidance of light in the fiber.
+The fiber core and cladding are made of silica ($`\text{SiO}_2`$) glass, with a higher refractive index for the core than the cladding to guarantee **total internal reflection** in the core — and hence the guidance of light in the fiber.
 
 ![Fig 3 — Structure of optical fiber](figures/1/fig08-fiber-structure.png)
 
@@ -188,13 +196,15 @@ Because of the extremely-small fiber core diameter, the SM fiber can accommodate
 
 *Fig 5. Single-mode vs. multimode propagation.*
 
-It is noteworthy that single-mode operation is determined by the core diameter ($D$) as well as the wavelength ($\lambda$) of the IR light. The following formula permits estimation of the number of modes in a fiber:
+It is noteworthy that single-mode operation is determined by the core diameter ($`D`$) as well as the wavelength ($`\lambda`$) of the IR light. The following formula permits estimation of the number of modes in a fiber:
 
-$$\#\,\text{Modes} \approx 0.5\left(\frac{\pi D}{\lambda}\right)^2 \left(n_f^2 - n_c^2\right)$$
+```math
+\#\,\text{Modes} \approx 0.5\left(\frac{\pi D}{\lambda}\right)^2 \left(n_f^2 - n_c^2\right)
+```
 
-where $n_f$ and $n_c$ are, respectively, the fiber core & cladding refractive indices.
+where $`n_f`$ and $`n_c`$ are, respectively, the fiber core & cladding refractive indices.
 
-The equation above demonstrates that **reducing the core diameter** ($D$) sufficiently can limit the number of modes to a single mode. This is consistent with the SM fiber, which employs a very small core diameter (~10 μm) compared to the ~60 μm large diameter of MM fiber.*
+The equation above demonstrates that **reducing the core diameter** ($`D`$) sufficiently can limit the number of modes to a single mode. This is consistent with the SM fiber, which employs a very small core diameter (~10 μm) compared to the ~60 μm large diameter of MM fiber.*
 
 > \* ~60 μm is roughly the thickness of a sheet of paper.
 
@@ -217,11 +227,11 @@ Typically a fiber-optic cable may contain several hundreds of fibers — thereby
 
 #### Attenuation
 
-One of the great advantages of optical fiber, apart from the high-data-rate carrying capacity, is the **low attenuation** loss — as low as $0.1\ \text{dB/km}$.
+One of the great advantages of optical fiber, apart from the high-data-rate carrying capacity, is the **low attenuation** loss — as low as $`0.1\ \text{dB/km}`$.
 
 A comparison with copper wire is in order: at 10 Gb/s data rate an optical fiber is capable of transmitting data over ~100 km; in comparison, for the same data rate, a copper-based link — due to fundamental EM limitations — can work over a range limited to ~1 meter (e.g. USB cable).
 
-In optical fibers, attenuation originates from two sources: **"material absorption"** and **"light scattering"**. A typical (dB/km) loss vs. wavelength $\lambda$ graph for silica is given in Fig 6 below. Notice the two **low-loss "windows"** at $\lambda = 1.31\ \mu m$ and $\lambda = 1.55\ \mu m$ — two popular IR wavelengths in optical communications. The spike in attenuation between these is due to absorption by the **"OH ion"** (hydroxyl) impurity.
+In optical fibers, attenuation originates from two sources: **"material absorption"** and **"light scattering"**. A typical (dB/km) loss vs. wavelength $`\lambda`$ graph for silica is given in Fig 6 below. Notice the two **low-loss "windows"** at $`\lambda = 1.31\ \mu m`$ and $`\lambda = 1.55\ \mu m`$ — two popular IR wavelengths in optical communications. The spike in attenuation between these is due to absorption by the **"OH ion"** (hydroxyl) impurity.
 
 ![Fig 6 — Fiber attenuation as a function of wavelength](figures/1/fig11-attenuation.png)
 
@@ -233,7 +243,7 @@ Material absorption loss is the result of impurities still present in the silica
 
 In modern optical fibers the maximum transmission range is more limited by **"dispersion"** than "absorption". Dispersion also limits the max data rate.
 
-**Dispersion** is defined as the variation in light propagation velocity ($v$) with the wavelength ($\lambda$) of the light. This is traceable to variation of the "index of refraction" ($n$) of the material with wavelength ($\lambda$).
+**Dispersion** is defined as the variation in light propagation velocity ($`v`$) with the wavelength ($`\lambda`$) of the light. This is traceable to variation of the "index of refraction" ($`n`$) of the material with wavelength ($`\lambda`$).
 
 Examples of dispersion include the naturally occurring rainbow (water droplets) and the colorful light display from a prism (glass). In optical fibers, variation of the "refractive index" with wavelength (optical frequency) is responsible for the widening (dispersion) of a short light pulse as it travels down the fiber. The spreading of the pulse is simply due to the different arrival times of its various frequency (wavelength) components as a consequence of their different propagation velocities. The given waveforms demonstrate how dispersion limits range and data rate.
 

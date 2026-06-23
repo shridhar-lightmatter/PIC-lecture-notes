@@ -18,9 +18,9 @@ The operating principle of a WDM communication link is straightforward and is de
 
 ![Fig 1 — WDM optical link (all lines are "optical")](figures/6/fig01-wdm-link.png)
 
-*Fig 1. WDM optical link (all lines are "optical").* Channel spacing: $\Delta\lambda = \dfrac{\text{FSR}}{N-1}$.
+*Fig 1. WDM optical link (all lines are "optical").* Channel spacing: $`\Delta\lambda = \dfrac{\text{FSR}}{N-1}`$.
 
-At the sending end, a number ($N$) of inputs consisting of data-carrying optical signals with uniformly-spaced wavelengths $\lambda_1, \lambda_2, \ldots, \lambda_N$ are combined into one optical stream. This is accomplished by an optical **Wavelength-Multiplexer ($\lambda$-MUX)**. At the receiving end, on the other hand, the aggregated optical stream is split back into its original $N$-optical signals with wavelengths $\lambda_1, \lambda_2, \ldots, \lambda_N$. This splitting function is accomplished by an optical **Wavelength-deMultiplexer ($\lambda$-deMUX)** performing the inverse function. Two WDM categories exist depending on $N$: **"coarse"** and **"dense"**.
+At the sending end, a number ($`N`$) of inputs consisting of data-carrying optical signals with uniformly-spaced wavelengths $`\lambda_1, \lambda_2, \ldots, \lambda_N`$ are combined into one optical stream. This is accomplished by an optical **Wavelength-Multiplexer ($`\lambda`$-MUX)**. At the receiving end, on the other hand, the aggregated optical stream is split back into its original $`N`$-optical signals with wavelengths $`\lambda_1, \lambda_2, \ldots, \lambda_N`$. This splitting function is accomplished by an optical **Wavelength-deMultiplexer ($`\lambda`$-deMUX)** performing the inverse function. Two WDM categories exist depending on $`N`$: **"coarse"** and **"dense"**.
 
 ---
 
@@ -29,7 +29,7 @@ At the sending end, a number ($N$) of inputs consisting of data-carrying optical
 - **CWDM:** **C**oarse WDM employs a relatively small number of widely-spaced wavelengths (up to 18 @ 20 nm spacing).
 - **DWDM:** **D**ense WDM employs a large number of closely-spaced wavelengths (up to 80 @ 0.8 nm spacing).
 
-Typically, DWDM is used for handling higher data rates, with a capacity (aggregate data rate) $> 1\ \text{Tb/s}$.
+Typically, DWDM is used for handling higher data rates, with a capacity (aggregate data rate) $`> 1\ \text{Tb/s}`$.
 
 For the purpose of standardization and interoperability, specific wavelength grids were promulgated by the **ITU (International Telecom Union)**. These are listed in tables in Appendix 1.
 
@@ -60,7 +60,7 @@ Because of these limitations, the single-ring resonator is not suitable for WDM 
 
 1. Its Lorentzian response varies significantly in the passband, which can result in signal distortion. A flat-top response is essential.
 2. Its out-of-band attenuation is insufficient — causing inadequate rejection of adjacent channels in WDM links — and hence increased "crosstalk".
-3. High free-spectral range (FSR), which is desirable in WDM systems, is achievable through use of smaller-radius ($R$) rings; this, however, can result in higher bending losses (e.g. $R < 1\ \mu m$).
+3. High free-spectral range (FSR), which is desirable in WDM systems, is achievable through use of smaller-radius ($`R`$) rings; this, however, can result in higher bending losses (e.g. $`R < 1\ \mu m`$).
 
 A pair of coupled-rings with an input waveguide and an output waveguide (see Fig 4) has superior performance properties that make for a structure suitable for WDM. The structure is often termed **double-ring resonator (DRR)**.
 
@@ -76,11 +76,11 @@ A pair of coupled-rings with an input waveguide and an output waveguide (see Fig
 
 ## Vernier Effect
 
-To demonstrate the extension of the FSR through the "Vernier effect", we examine the resulting drop transmission of a DRR for two combinations of different ring radii $(R_1, R_2)$.
+To demonstrate the extension of the FSR through the "Vernier effect", we examine the resulting drop transmission of a DRR for two combinations of different ring radii $`(R_1, R_2)`$.
 
-**(1)** Ring #2 is smaller, with half the radius of Ring #1 — i.e. $R_2 = \tfrac{1}{2} R_1$. Because $\text{FSR} \propto \dfrac{1}{R}$, we conclude $\text{FSR}_2 = 2 \times \text{FSR}_1$.
+**(1)** Ring #2 is smaller, with half the radius of Ring #1 — i.e. $`R_2 = \tfrac{1}{2} R_1`$. Because $`\text{FSR} \propto \dfrac{1}{R}`$, we conclude $`\text{FSR}_2 = 2 \times \text{FSR}_1`$.
 
-**(2)** $\dfrac{R_2}{R_1} = \dfrac{M}{N} \;\rightarrow\; \text{FSR} = N\,\text{FSR}_1 = M\,\text{FSR}_2$
+**(2)** $`\dfrac{R_2}{R_1} = \dfrac{M}{N} \;\rightarrow\; \text{FSR} = N\,\text{FSR}_1 = M\,\text{FSR}_2`$
 
 ![Fig 5 — The Vernier effect](figures/6/fig05-vernier.png)
 
@@ -93,31 +93,39 @@ To demonstrate the extension of the FSR through the "Vernier effect", we examine
 - A design objective would aim to reduce these undesirable interstitial peaks.
 - The resulting FSR of the DRR structure is:
 
-$$\text{FSR} = N \times \text{FSR}_1 = M \times \text{FSR}_2$$
+```math
+\text{FSR} = N \times \text{FSR}_1 = M \times \text{FSR}_2
+```
 
 This can be shown as follows:
 
-For a "drop" optical signal to be produced at a certain $\lambda$, then both rings must be at resonance, i.e.
+For a "drop" optical signal to be produced at a certain $`\lambda`$, then both rings must be at resonance, i.e.
 
-$$\text{(1)}\quad N\lambda = 2\pi R_1\, n_{\text{eff}} \qquad\qquad \text{(2)}\quad M\lambda = 2\pi R_2\, n_{\text{eff}}$$
+```math
+\text{(1)}\quad N\lambda = 2\pi R_1\, n_{\text{eff}} \qquad\qquad \text{(2)}\quad M\lambda = 2\pi R_2\, n_{\text{eff}}
+```
 
 whose ratio leads to
 
-$$\frac{M}{N} = \frac{R_2}{R_1} \qquad (3)$$
+```math
+\frac{M}{N} = \frac{R_2}{R_1} \qquad (3)
+```
 
-Since $\text{FSR} = \dfrac{\lambda^2}{n_g L}$, we can express $L = \dfrac{\lambda^2}{n_g\,\text{FSR}}$, and hence find $\dfrac{L_1}{L_2} = \dfrac{\text{FSR}_2}{\text{FSR}_1}$ (where $L = 2\pi R$ is the ring circumference). Equivalently, $\dfrac{R_2}{R_1} = \dfrac{\text{FSR}_1}{\text{FSR}_2}$, which when used in (3) yields
+Since $`\text{FSR} = \dfrac{\lambda^2}{n_g L}`$, we can express $`L = \dfrac{\lambda^2}{n_g\,\text{FSR}}`$, and hence find $`\dfrac{L_1}{L_2} = \dfrac{\text{FSR}_2}{\text{FSR}_1}`$ (where $`L = 2\pi R`$ is the ring circumference). Equivalently, $`\dfrac{R_2}{R_1} = \dfrac{\text{FSR}_1}{\text{FSR}_2}`$, which when used in (3) yields
 
-$$\frac{M}{N} = \frac{R_2}{R_1} = \frac{\text{FSR}_1}{\text{FSR}_2} \qquad (4)$$
+```math
+\frac{M}{N} = \frac{R_2}{R_1} = \frac{\text{FSR}_1}{\text{FSR}_2} \qquad (4)
+```
 
 ---
 
 ## Double-Ring Resonator — Analysis
 
-Shown in Fig 6 a DRR employing two coupled rings of radii $R_1, R_2$ with their individual waveguides. Of interest is the **"drop"** and **"thru"** transmissions of the DRR $\Rightarrow T_{\text{drop}}$ & $T_{\text{thru}}$.
+Shown in Fig 6 a DRR employing two coupled rings of radii $`R_1, R_2`$ with their individual waveguides. Of interest is the **"drop"** and **"thru"** transmissions of the DRR $`\Rightarrow T_{\text{drop}}`$ & $`T_{\text{thru}}`$.
 
 For the purpose of analysis, the DRR will be viewed as a photonic structure made of three directional couplers (top, middle, bottom), and a set of four half-circle waveguides (propagation regions).
 
-As before, the three directional couplers will be assumed lossless. Furthermore, back-reflections are assumed small and negligible. These are represented by "0" (zero) corresponding waves on the "segmented DRR" (Fig 6, right). Symmetrical coupling is assumed for circle-waveguide (both $\kappa_i$).
+As before, the three directional couplers will be assumed lossless. Furthermore, back-reflections are assumed small and negligible. These are represented by "0" (zero) corresponding waves on the "segmented DRR" (Fig 6, right). Symmetrical coupling is assumed for circle-waveguide (both $`\kappa_i`$).
 
 ![Fig 6 — DRR viewed as three directional couplers and four half-circle waveguides](figures/6/fig06-drr-analysis.png)
 
@@ -125,69 +133,89 @@ As before, the three directional couplers will be assumed lossless. Furthermore,
 
 The three directional couplers obey the scattering relations:
 
-$$\text{(1)}\quad \begin{pmatrix} b_2 \\ b_4 \end{pmatrix} = [S_1]\begin{pmatrix} a_1 \\ a_3 \end{pmatrix} \qquad \text{(2)}\quad \begin{pmatrix} b_2' \\ b_4' \end{pmatrix} = [S_2]\begin{pmatrix} a_1' \\ a_3' \end{pmatrix} \qquad \text{(3)}\quad \begin{pmatrix} b_2'' \\ b_4'' \end{pmatrix} = [S_1]\begin{pmatrix} a_1'' \\ a_3'' \end{pmatrix}$$
+```math
+\text{(1)}\quad \begin{pmatrix} b_2 \\ b_4 \end{pmatrix} = [S_1]\begin{pmatrix} a_1 \\ a_3 \end{pmatrix} \qquad \text{(2)}\quad \begin{pmatrix} b_2' \\ b_4' \end{pmatrix} = [S_2]\begin{pmatrix} a_1' \\ a_3' \end{pmatrix} \qquad \text{(3)}\quad \begin{pmatrix} b_2'' \\ b_4'' \end{pmatrix} = [S_1]\begin{pmatrix} a_1'' \\ a_3'' \end{pmatrix}
+```
 
 where,
 
-$$[S_i] = \begin{pmatrix} \sqrt{1-\kappa_i^2} & -j\kappa_i \\[2pt] -j\kappa_i & \sqrt{1-\kappa_i^2} \end{pmatrix}, \quad i = 1,2 \qquad (4)$$
+```math
+[S_i] = \begin{pmatrix} \sqrt{1-\kappa_i^2} & -j\kappa_i \\[2pt] -j\kappa_i & \sqrt{1-\kappa_i^2} \end{pmatrix}, \quad i = 1,2 \qquad (4)
+```
 
-$\Rightarrow$ (for $i=1$, for example):
+$`\Rightarrow`$ (for $`i=1`$, for example):
 
-$$\begin{cases} b_2 = \sqrt{1-\kappa_1^2}\, a_1 - j\kappa_1\, a_3 \\[4pt] b_4 = -j\kappa_1\, a_1 + \sqrt{1-\kappa_1^2}\, a_3 \end{cases} \qquad (5)$$
+```math
+\begin{cases} b_2 = \sqrt{1-\kappa_1^2}\, a_1 - j\kappa_1\, a_3 \\[4pt] b_4 = -j\kappa_1\, a_1 + \sqrt{1-\kappa_1^2}\, a_3 \end{cases} \qquad (5)
+```
 
 ### Propagation relations on the 4 half-circles
 
 Ring #1:
 
-$$\text{(6)}\quad a_1' = b_4\, e^{-j\phi_1} \qquad \text{(7)}\quad a_3 = b_2'\, e^{-j\phi_1} \qquad\quad \phi_1 = (\beta - j\alpha)\,\pi R_1$$
+```math
+\text{(6)}\quad a_1' = b_4\, e^{-j\phi_1} \qquad \text{(7)}\quad a_3 = b_2'\, e^{-j\phi_1} \qquad\quad \phi_1 = (\beta - j\alpha)\,\pi R_1
+```
 
 Ring #2:
 
-$$\text{(8)}\quad a_1'' = b_4'\, e^{-j\phi_2} \qquad \text{(9)}\quad a_3' = b_2''\, e^{-j\phi_2} \qquad\quad \phi_2 = (\beta - j\alpha)\,\pi R_2$$
+```math
+\text{(8)}\quad a_1'' = b_4'\, e^{-j\phi_2} \qquad \text{(9)}\quad a_3' = b_2''\, e^{-j\phi_2} \qquad\quad \phi_2 = (\beta - j\alpha)\,\pi R_2
+```
 
 (each is a half-circle propagation phase & loss.)
 
-In the above, the propagation phase constant $\beta = \left(\dfrac{2\pi}{\lambda}\right) n_{\text{eff}}$ and the attenuation constant $\alpha$ describe the two rings.
+In the above, the propagation phase constant $`\beta = \left(\dfrac{2\pi}{\lambda}\right) n_{\text{eff}}`$ and the attenuation constant $`\alpha`$ describe the two rings.
 
 ### Drop & Thru transmissions
 
-The **DROP** and **THRU** transmissions $\{T_{\text{drop}}$ & $T_{\text{thru}}\}$ for the DRR are derived by using (1)…(9) for $a_3' \equiv 0$ ("add" = 0). After some algebra we arrive at:
+The **DROP** and **THRU** transmissions $`\{T_{\text{drop}}`$ & $`T_{\text{thru}}\}`$ for the DRR are derived by using (1)…(9) for $`a_3' \equiv 0`$ ("add" = 0). After some algebra we arrive at:
 
-$$T_{\text{drop}} = \left|\frac{b_4''}{a_1}\right|^2 = \left|\frac{j\kappa_1^2 \kappa_2\, e^{-j(\phi_1+\phi_2)}}{1 - \sqrt{(1-\kappa_1^2)(1-\kappa_2^2)}\left(e^{-j2\phi_1} + e^{-j2\phi_2}\right) + (1-\kappa_2^2)\, e^{-j2(\phi_1+\phi_2)}}\right|^2 \qquad (10)$$
+```math
+T_{\text{drop}} = \left|\frac{b_4''}{a_1}\right|^2 = \left|\frac{j\kappa_1^2 \kappa_2\, e^{-j(\phi_1+\phi_2)}}{1 - \sqrt{(1-\kappa_1^2)(1-\kappa_2^2)}\left(e^{-j2\phi_1} + e^{-j2\phi_2}\right) + (1-\kappa_2^2)\, e^{-j2(\phi_1+\phi_2)}}\right|^2 \qquad (10)
+```
 
-$$T_{\text{thru}} = \left|\frac{b_2}{a_1}\right|^2 = \left|\frac{1}{\sqrt{1-\kappa_1^2}}\left[1 - \frac{\kappa_1^2\left\{\sqrt{(1-\kappa_1^2)(1-\kappa_2^2)}\;\kappa_2\, e^{-j(\phi_1+\phi_2)}\right\}}{1 - \sqrt{(\ \cdots\ )}(\ \cdots\ ) + (1-\kappa_1^2)\, e^{-j2(\ \cdots\ )}}\right]\right|^2 \qquad (11)$$
+```math
+T_{\text{thru}} = \left|\frac{b_2}{a_1}\right|^2 = \left|\frac{1}{\sqrt{1-\kappa_1^2}}\left[1 - \frac{\kappa_1^2\left\{\sqrt{(1-\kappa_1^2)(1-\kappa_2^2)}\;\kappa_2\, e^{-j(\phi_1+\phi_2)}\right\}}{1 - \sqrt{(\ \cdots\ )}(\ \cdots\ ) + (1-\kappa_1^2)\, e^{-j2(\ \cdots\ )}}\right]\right|^2 \qquad (11)
+```
 
-### "Critical coupling" $\kappa_2$
+### "Critical coupling" $`\kappa_2`$
 
-The **"critical coupling"** $\kappa_2$ is defined as the ring-coupling that produces an optimum $T_{\text{drop}} = 1$ (@ resonance).
+The **"critical coupling"** $`\kappa_2`$ is defined as the ring-coupling that produces an optimum $`T_{\text{drop}} = 1`$ (@ resonance).
 
 Resonance for the DRR system of two rings occurs when **both** rings are independently at resonance, i.e.:
 
-$$2\phi_1 = N \cdot 2\pi \qquad \& \qquad 2\phi_2 = M \cdot 2\pi \qquad (12)^*$$
+```math
+2\phi_1 = N \cdot 2\pi \qquad \& \qquad 2\phi_2 = M \cdot 2\pi \qquad (12)^*
+```
 
 Substitution of (12) into (10) yields:
 
-$$T_{\text{drop}} = \left|\frac{j\kappa_1^2 \kappa_2}{1 - 2\sqrt{(1-\kappa_1^2)(1-\kappa_2^2)} + 1 - \kappa_2^2}\right|^2 \qquad (13)$$
+```math
+T_{\text{drop}} = \left|\frac{j\kappa_1^2 \kappa_2}{1 - 2\sqrt{(1-\kappa_1^2)(1-\kappa_2^2)} + 1 - \kappa_2^2}\right|^2 \qquad (13)
+```
 
-> \* **Note:** Here $\phi_{1,2}$ are actually $\beta\,\pi R_{1,2}$ (with $\alpha \sim 0$).
+> \* **Note:** Here $`\phi_{1,2}`$ are actually $`\beta\,\pi R_{1,2}`$ (with $`\alpha \sim 0`$).
 
-The optimum magnitude $\kappa_2$ which makes $T_{\text{drop}} = 1$ at resonance is found from (13) and is referred to as the **critical inter-ring coupling coefficient**:
+The optimum magnitude $`\kappa_2`$ which makes $`T_{\text{drop}} = 1`$ at resonance is found from (13) and is referred to as the **critical inter-ring coupling coefficient**:
 
-$$\kappa_2(\text{crit.}) = \frac{\kappa_1^2}{2 - \kappa_1^2} \qquad (14)$$
+```math
+\kappa_2(\text{crit.}) = \frac{\kappa_1^2}{2 - \kappa_1^2} \qquad (14)
+```
 
-It is worthwhile examining the effect of $\kappa_2$ on drop action @ 3 cases:
+It is worthwhile examining the effect of $`\kappa_2`$ on drop action @ 3 cases:
 
-- **i) under-coupling:** $\kappa_2 < \kappa_2(\text{crit})$
-- **ii) critical:** $\kappa_2 \approx \kappa_2(\text{crit})$
-- **iii) over-coupling:** $\kappa_2 > \kappa_2(\text{crit})$
+- **i) under-coupling:** $`\kappa_2 < \kappa_2(\text{crit})`$
+- **ii) critical:** $`\kappa_2 \approx \kappa_2(\text{crit})`$
+- **iii) over-coupling:** $`\kappa_2 > \kappa_2(\text{crit})`$
 
-The resulting $T_{\text{drop}}$'s take on different character depending on $\kappa_2$ (Fig 7), based on calculations of eqn (10) using a computational program such as MATLAB.
+The resulting $`T_{\text{drop}}`$'s take on different character depending on $`\kappa_2`$ (Fig 7), based on calculations of eqn (10) using a computational program such as MATLAB.
 
 ![Fig 7 — T_drop as a function of κ₂: a) below, b) critical, c) above](figures/6/fig07-tdrop-coupling.png)
 
-*Fig 7. $T_{\text{drop}}$ as a function of $\kappa_2$: a) "below", b) critical, c) "above".*
+*Fig 7. $`T_{\text{drop}}`$ as a function of $`\kappa_2`$: a) "below", b) critical, c) "above".*
 
-An important attribute of a critically-coupled DRR is (i) a **FLAT-TOP** plot of $T_{\text{drop}}$, and (ii) a **sharper drop** in the stopband.
+An important attribute of a critically-coupled DRR is (i) a **FLAT-TOP** plot of $`T_{\text{drop}}`$, and (ii) a **sharper drop** in the stopband.
 
 The **flat-top** feature implies absence of signal distortion due to uniformity of processing at the various frequencies of the signal. The **sharp roll-off** outside the passband produces superior rejection of an adjacent channel and hence superior **crosstalk** performance for WDM operation.
 
@@ -201,7 +229,7 @@ CWDM (Coarse Wavelength Division Multiplexing) and DWDM (Dense Wavelength Divisi
 
 ITU-T G.694.2 defines 18 wavelengths (C1–C18) for CWDM transport ranging from 1270 to 1610 nm, spaced at 20 nm apart. The complete CWDM grid is shown below. Each CWDM channel is transparent to the speed and type of data, meaning that any mix of SAN, WAN, voice and video services can be transported simultaneously over a single fiber or fiber pair.
 
-Channel spacing: $\Delta\lambda = 20\ \text{nm}$.
+Channel spacing: $`\Delta\lambda = 20\ \text{nm}`$.
 
 | ITU Channel No. | Wavelength (nm) | | ITU Channel No. | Wavelength (nm) |
 | --- | --- | --- | --- | --- |
@@ -226,7 +254,7 @@ FS CWDM transceivers are available with all 18 CWDM wavelengths, including CWDM 
 
 ITU-T G.694.1 standard DWDM region is from 1528.77 nm to 1563.86 nm that resides mostly within the C band. DWDM can have 100 GHz (0.8 nm) wavelength spacing for 40 channels, or 50 GHz (0.4 nm) spacing for 80 channels. The complete channel grid for 100 GHz DWDM is shown below.
 
-Channel spacing: $\Delta\lambda = 0.8\ \text{nm}$.
+Channel spacing: $`\Delta\lambda = 0.8\ \text{nm}`$.
 
 | Channel | Frequency (THz) | Center Wavelength (nm) | | Channel | Frequency (THz) | Center Wavelength (nm) |
 | --- | --- | --- | --- | --- | --- | --- |
