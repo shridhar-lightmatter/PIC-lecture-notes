@@ -35,7 +35,7 @@ E_s(t) = E_s \cos(\omega_s t + \varphi_s)
 ```
 
 ```math
-E_{LO}(t) = E_{LO}\cos(\omega_{LO} t + \varphi_{LO}) \tag{1}
+E_{LO}(t) = E_{LO}\cos(\omega_{LO} t + \varphi_{LO}) \quad (1)
 ```
 
 ```math
@@ -45,7 +45,7 @@ E_{LO}(t) = E_{LO}\cos(\omega_{LO} t + \varphi_{LO}) \tag{1}
 As shown in the figure, the two equal-polarization beams of light — signal ($`E_s`$) and LO ($`E_{LO}`$) — result in a total field $`E_{tot}(t) = E_s(t) + E_{LO}(t)`$. The photocurrent produced $`i(t)`$ is proportional to the light intensity, i.e. the square $`E_{tot}(t)^2`$:
 
 ```math
-i(t) = R \cdot E_{tot}(t)^2 \tag{2}
+i(t) = R \cdot E_{tot}(t)^2 \quad (2)
 ```
 
 where $`R`$ = "**Responsivity**" of the photodiode $`\left(\dfrac{A}{V/m}\right)^2`$.
@@ -57,7 +57,7 @@ where $`R`$ = "**Responsivity**" of the photodiode $`\left(\dfrac{A}{V/m}\right)
 Following substitution of (1) and making use of the trig. identity $`\cos\alpha\cos\beta = \tfrac{1}{2}\cos(\alpha+\beta) + \tfrac{1}{2}\cos(\alpha-\beta)`$, we find:
 
 ```math
-i(t) = R\left[\frac{E_s^2}{2}\big(1 + \cos(2\omega_s t + 2\varphi_s)\big) + \frac{E_{LO}^2}{2}\big(1 + \cos(2\omega_{LO} t + 2\varphi_{LO})\big) + E_s E_{LO}\Big(\cos\big((\omega_s+\omega_{LO})t + \varphi_s + \varphi_{LO}\big) + \cos\big((\omega_s-\omega_{LO})t + \varphi_s - \varphi_{LO}\big)\Big)\right] \tag{2}
+i(t) = R\left[\frac{E_s^2}{2}\big(1 + \cos(2\omega_s t + 2\varphi_s)\big) + \frac{E_{LO}^2}{2}\big(1 + \cos(2\omega_{LO} t + 2\varphi_{LO})\big) + E_s E_{LO}\Big(\cos\big((\omega_s+\omega_{LO})t + \varphi_s + \varphi_{LO}\big) + \cos\big((\omega_s-\omega_{LO})t + \varphi_s - \varphi_{LO}\big)\Big)\right] \quad (2)
 ```
 
 Eqn (2) reveals that the light intensity, and hence photocurrent, contains multiple frequencies: **DC**, double ($`2\omega_s,\ 2\omega_{LO}`$), a sum ($`\omega_s + \omega_{LO}`$), and a "low-frequency" difference ($`\omega_s - \omega_{LO}`$).
@@ -65,7 +65,7 @@ Eqn (2) reveals that the light intensity, and hence photocurrent, contains multi
 The difference frequency — often referred to as "**beat**" or **intermediate frequency** (**IF**) — is typically set in the RF range, $`\omega_{IF} \triangleq \omega_s - \omega_{LO} \sim 10^9\ \text{rad}`$. The remaining frequencies are much higher and fall in the optical range ($`\sim 10^{14}\ \text{rad/s}`$). Now, semiconductor physics of the photodiode indicates that the mobile charge carriers ($`e`$'s and $`h`$'s) can move and follow the RF ("beat") electric field but are unable to respond to the much faster optical-frequency fields. Mathematically, this can be accounted for by disregarding all optical-frequency terms and retaining only two "low-frequency" terms: DC & IF. Therefore, the photocurrent reduces to:
 
 ```math
-i(t) = \underbrace{R\left(\frac{E_s^2}{2} + \frac{E_{LO}^2}{2}\right)}_{\text{"DIRECT"}} + \underbrace{R\cdot E_s E_{LO}\cos(\omega_{IF}t + \varphi_{IF})}_{\text{"COHERENT"}} \tag{3}
+i(t) = \underbrace{R\left(\frac{E_s^2}{2} + \frac{E_{LO}^2}{2}\right)}_{\text{"DIRECT"}} + \underbrace{R\cdot E_s E_{LO}\cos(\omega_{IF}t + \varphi_{IF})}_{\text{"COHERENT"}} \quad (3)
 ```
 
 where $`\omega_{IF} = \omega_s - \omega_{LO}`$ & $`\varphi_{IF} = \varphi_s - \varphi_{LO}`$.
@@ -95,7 +95,7 @@ i(t) &= \frac{1}{2}R\,\big|\bar{E}_{tot}\big|^2 = \frac{1}{2}R\left[\bar{E}_{tot
 &= \frac{R}{2}\left[E_s^2 + E_{LO}^2 + E_s E_{LO}\, e^{j(\omega_{IF} t + \varphi_{IF})} + E_s E_{LO}\, e^{-j(\omega_{IF} t + \varphi_{IF})}\right] \\
 &= R\left[\frac{E_s^2}{2} + \frac{E_{LO}^2}{2} + E_s E_{LO}\cos(\omega_{IF} t + \varphi_{IF})\right]
 \end{aligned}
-\tag{3}
+\quad (3)
 ```
 
 which can be seen to be identical to the previous result.
@@ -117,7 +117,7 @@ The presence of this LO-induced excess noise detracts markedly from the **SNR** 
 *Fig 2. Double (Balanced) Mixer detector: two photodiodes + 3 dB coupler.*
 
 ```math
-\begin{pmatrix} \bar{E}_1 \\ \bar{E}_2 \end{pmatrix} = [\,S\,]\begin{pmatrix} \bar{E}_s \\ \bar{E}_{LO} \end{pmatrix} \tag{4}
+\begin{pmatrix} \bar{E}_1 \\ \bar{E}_2 \end{pmatrix} = [\,S\,]\begin{pmatrix} \bar{E}_s \\ \bar{E}_{LO} \end{pmatrix} \quad (4)
 ```
 
 The Double (Balanced) Mixer detector employs a matched pair of photodiodes and a "3-dB coupler" as shown in Fig 2. This arrangement accomplishes two very desirable outcomes: **cancellation** of the "excess noise" in the output (difference) photocurrent $`i_d\ (= i_1 - i_2)`$, and simultaneously a **doubling** of the magnitude of output signal component of photocurrent.
@@ -125,7 +125,7 @@ The Double (Balanced) Mixer detector employs a matched pair of photodiodes and a
 As shown in Fig 2, the signal light beam $`\bar{E}_s(t)`$ and the LO light beam $`\bar{E}_{LO}(t)`$ are equally combined by the 3-dB coupler to produce a pair of output fields $`\bar{E}_1(t)`$ and $`\bar{E}_2(t)`$ — each focused on a separate photodiode. Eqn (4) above gives $`\bar{E}_{1,2}`$ in terms of the inputs $`\bar{E}_s`$ & $`\bar{E}_{LO}`$ and the optical coupler's "scattering matrix" $`[S]`$:
 
 ```math
-[\,S\,] = \frac{e^{-j\beta L}}{\sqrt{2}}\begin{pmatrix} 1 & -j \\ -j & 1 \end{pmatrix} \tag{5}
+[\,S\,] = \frac{e^{-j\beta L}}{\sqrt{2}}\begin{pmatrix} 1 & -j \\ -j & 1 \end{pmatrix} \quad (5)
 ```
 
 > **Note:** please refer to a previous treatment of the optical coupler, given in an earlier Lecture. Here, $`L`$ = DC coupling region length.
@@ -135,7 +135,7 @@ As shown in Fig 2, the signal light beam $`\bar{E}_s(t)`$ and the LO light beam 
 The excitation fields of the pair of photodiodes is found by combining (4) and (5):
 
 ```math
-\bar{E}_1 = \frac{e^{-j\beta L}}{\sqrt{2}}\big(\bar{E}_s - j\bar{E}_{LO}\big), \qquad \bar{E}_2 = \frac{e^{-j\beta L}}{\sqrt{2}}\big(-j\bar{E}_s + \bar{E}_{LO}\big) \tag{6}
+\bar{E}_1 = \frac{e^{-j\beta L}}{\sqrt{2}}\big(\bar{E}_s - j\bar{E}_{LO}\big), \qquad \bar{E}_2 = \frac{e^{-j\beta L}}{\sqrt{2}}\big(-j\bar{E}_s + \bar{E}_{LO}\big) \quad (6)
 ```
 
 The generated pair of photocurrents are:
@@ -145,7 +145,7 @@ The generated pair of photocurrents are:
 i_1 &= \tfrac{1}{2}R_1\big|\bar{E}_1\big|^2 = \frac{R_1}{4}\big|\bar{E}_s - j\bar{E}_{LO}\big|^2 = \cdots = \frac{R_1}{4}\Big(E_s^2 + E_{LO}^2 + 2\,\mathrm{Im}\big(\bar{E}_{LO}\bar{E}_s^{*}\big)\Big) \\
 i_2 &= \tfrac{1}{2}R_2\big|\bar{E}_2\big|^2 = \frac{R_2}{4}\big|{-j}\bar{E}_s + \bar{E}_{LO}\big|^2 = \cdots = \frac{R_2}{4}\Big(E_s^2 + E_{LO}^2 - 2\,\mathrm{Im}\big(\bar{E}_{LO}\bar{E}_s^{*}\big)\Big)
 \end{aligned}
-\tag{7}
+\quad (7)
 ```
 
 where $`R_{1,2}`$ = sensitivities of photodiode 1 & 2.
@@ -155,7 +155,7 @@ Noteworthy in (7) is the "**out-of-phase**" relationship between the two "signal
 In the terminology of "differential amplifiers", the direct-detection terms are recognized as "**COMMON-MODE**" component, while the coherent-detection terms form the "**DIFFERENTIAL-MODE**" component. Clearly, the balanced detector suppresses the undesirable CM component.
 
 ```math
-i_d \triangleq i_1 - i_2 = R\,\mathrm{Im}\big(\bar{E}_{LO}\bar{E}_s^{*}\big) = -R\, E_{LO} E_s \sin(\omega_{IF} t + \varphi_{IF}) \tag{8}
+i_d \triangleq i_1 - i_2 = R\,\mathrm{Im}\big(\bar{E}_{LO}\bar{E}_s^{*}\big) = -R\, E_{LO} E_s \sin(\omega_{IF} t + \varphi_{IF}) \quad (8)
 ```
 
 > **Conclusion:** the (conspicuous) absence of the "direct-detection" term $`E_{LO}^2`$ in the output $`i_d`$ (eqn 8) has a welcome implication: substantial **REDUCTION** of "excess noise" produced by the LO laser. This is predicated, however, on a perfectly symmetrical, i.e. "**BALANCED**" system: a "matched" photodiode pair, and a perfectly symmetrical (i.e. 50–50) optical coupler. This dictates the need for **extreme care** to be exercised during system implementation. (Fortunately, any residual imbalance in the system can be removed with the aid of DSP.)
@@ -171,15 +171,15 @@ In practice, instead of a "current" it is more convenient to use a "voltage" as 
 *Fig 3. Conversion of $`i`$ to $`V`$ with a CMOS broadband TIA. (a) Single-Mixer Rx, (b) Double-Mixer Rx.*
 
 ```math
-V_o = -\left(\frac{R_f}{1 + \frac{1}{A}}\right) i \tag{9}
+V_o = -\left(\frac{R_f}{1 + \frac{1}{A}}\right) i \quad (9)
 ```
 
 ```math
-V_o = -\left(\frac{R_f}{1 + \frac{1}{A}}\right) i_d \tag{10}
+V_o = -\left(\frac{R_f}{1 + \frac{1}{A}}\right) i_d \quad (10)
 ```
 
 ```math
-R_i = \frac{R_f}{1 + A} \rightarrow 0 \quad \text{(Miller effect)} \tag{11}
+R_i = \frac{R_f}{1 + A} \rightarrow 0 \quad \text{(Miller effect)} \quad (11)
 ```
 
 Important parameters of the above TIA block is the transimpedance gain $`\left(\dfrac{-R_f}{1 + \frac{1}{A}}\right)`$ and input resistance $`\left(\dfrac{R_f}{1+A}\right)`$. For a very-high-gain "core" amplifier ($`A \gg 1`$) ideal performance is achieved: $`-R_f`$ for the TIA gain, and a desirable short-circuit ($`R_i = 0`$) for input impedance. Note the tradeoff involving $`R_f`$: increased value for higher sensitivity (gain), but a small value for reduced thermal noise $`\overline{v^2} = 4kTR_f B`$ (where $`B`$ = system bandwidth).
@@ -209,7 +209,7 @@ Now one can determine the four field outputs $`\bar{E}_1, \cdots, \bar{E}_4`$ of
 ```
 
 ```math
-\begin{pmatrix} \bar{E}_3 \\ \bar{E}_4 \end{pmatrix} = \frac{e^{-j\beta L}}{\sqrt{2}}\begin{pmatrix} 1 & -j \\ -j & 1 \end{pmatrix}\begin{pmatrix} \frac{\bar{E}_s}{\sqrt{2}} \\ -j\frac{\bar{E}_{LO}}{\sqrt{2}} \end{pmatrix} \tag{12a}
+\begin{pmatrix} \bar{E}_3 \\ \bar{E}_4 \end{pmatrix} = \frac{e^{-j\beta L}}{\sqrt{2}}\begin{pmatrix} 1 & -j \\ -j & 1 \end{pmatrix}\begin{pmatrix} \frac{\bar{E}_s}{\sqrt{2}} \\ -j\frac{\bar{E}_{LO}}{\sqrt{2}} \end{pmatrix} \quad (12a)
 ```
 
 Or, after rewriting these fields explicitly:
@@ -221,7 +221,7 @@ Or, after rewriting these fields explicitly:
 \bar{E}_3 = \left(\ ''\ \right)\big(\bar{E}_s - \bar{E}_{LO}\big) \\[4pt]
 \bar{E}_4 = \left(\ ''\ \right)\big(-j\bar{E}_s - j\bar{E}_{LO}\big)
 \end{cases}
-\tag{12b}
+\quad (12b)
 ```
 
 Using Eqn (8) for the "difference" output currents $`i_Q`$ and $`i_I`$, we find after algebra:
@@ -231,7 +231,7 @@ Using Eqn (8) for the "difference" output currents $`i_Q`$ and $`i_I`$, we find 
 i_Q &= i_1 - i_2 = \frac{R}{2}\,\mathrm{Im}\big(\bar{E}_{LO}\bar{E}_s^{*}\big) = \frac{R}{2}E_{LO}E_s\sin(\omega_{IF}t + \varphi_s) \\
 i_I &= i_3 - i_4 = \frac{R}{2}\,\mathrm{Re}\big(\bar{E}_{LO}\bar{E}_s^{*}\big) = \frac{R}{2}E_{LO}E_s\cos(\omega_{IF}t + \varphi_s)
 \end{aligned}
-\tag{13}
+\quad (13)
 ```
 
 where use was made of $`i_j = \tfrac{1}{2}R\,|\bar{E}_j|^2`$ ($`j = 1 \cdots 4`$).
@@ -239,7 +239,7 @@ where use was made of $`i_j = \tfrac{1}{2}R\,|\bar{E}_j|^2`$ ($`j = 1 \cdots 4`$
 Finally, with the aid of DSP the complex phasor output photocurrent can be obtained:
 
 ```math
-i_{out} = i_I + j\, i_Q = \frac{R}{2}E_{LO}E_s\, e^{j(\omega_{IF}t + \varphi_{IF})} \tag{14a}
+i_{out} = i_I + j\, i_Q = \frac{R}{2}E_{LO}E_s\, e^{j(\omega_{IF}t + \varphi_{IF})} \quad (14a)
 ```
 
 Except for a multiplier quantity ($`\tfrac{R}{2}E_{LO}`$), Eqn (14a) is recognized as the original modulated optical signal $`E_s(t)`$ after being downconverted to RF at $`\omega_{IF}\ (= \omega_s - \omega_{LO})`$. Note also that except for a constant ($`\varphi_{LO}`$), the signal phase is preserved as $`\varphi_{IF}\ (= \varphi_s - \varphi_{LO})`$.
@@ -247,7 +247,7 @@ Except for a multiplier quantity ($`\tfrac{R}{2}E_{LO}`$), Eqn (14a) is recogniz
 Now, by appropriate DSP (before A-D conversion) the time varying term $`e^{j\omega_{IF}t}`$ can be "removed" leading to the phasor amplitude:
 
 ```math
-i_{out} = \frac{R}{2}E_{LO}E_s\, e^{j(\varphi_s - \varphi_{LO})} \tag{14b}
+i_{out} = \frac{R}{2}E_{LO}E_s\, e^{j(\varphi_s - \varphi_{LO})} \quad (14b)
 ```
 
 ---

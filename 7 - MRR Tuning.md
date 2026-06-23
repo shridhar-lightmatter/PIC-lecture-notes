@@ -27,7 +27,7 @@ While $`R`$ has a *direct* effect on these parameters, the spacing or gap (b/w r
 The temperature of the microring alters the effective refractive index $`n_{\text{eff}}`$. This is often referred to as the **Thermo-Optic (TO) Effect**. For Si @ $`1.55\ \mu m`$:
 
 ```math
-\frac{dn_{\text{eff}}}{dT} = 1.86 \times 10^{-4}\ (\,^{\circ}\mathrm{C}^{-1}) \tag{1}
+\frac{dn_{\text{eff}}}{dT} = 1.86 \times 10^{-4}\ (\,^{\circ}\mathrm{C}^{-1}) \quad (1)
 ```
 
 For a temperature increase, eqn (1) points to occurrence of a small **RED SHIFT** in resonance $`\lambda_r`$ (see relation i) for $`\lambda_r`$ above). This can actually be put to use for tuning purposes through an embedded on-chip microheater.
@@ -86,7 +86,7 @@ The plasma-dispersion effect for Si is quantified near 1310 nm and 1550 nm as fo
 \left.\begin{aligned}
 \Delta n &= -\left(6.2 \times 10^{-22}\,\Delta N_e + 6.0 \times 10^{-18}\,\Delta N_h^{\,0.8}\right) \\[4pt]
 \Delta\alpha &= 3.0 \times 10^{-18}\,\Delta N_e + 2.0 \times 10^{-18}\,\Delta N_h
-\end{aligned}\right\} \tag{2}
+\end{aligned}\right\} \quad (2)
 ```
 
 **$`\lambda \sim 1550\ \text{nm}`$:**
@@ -95,7 +95,7 @@ The plasma-dispersion effect for Si is quantified near 1310 nm and 1550 nm as fo
 \left.\begin{aligned}
 \Delta n &= -\left(8.8 \times 10^{-22}\,\Delta N_e + 8.5 \times 10^{-18}\cdot\Delta N_h^{\,0.8}\right) \\[4pt]
 \Delta\alpha &= 8.5 \times 10^{-18}\,\Delta N_e + 6.0 \times 10^{-18}\,\Delta N_h
-\end{aligned}\right\} \tag{3}
+\end{aligned}\right\} \quad (3)
 ```
 
 In the above eqns (2) & (3), $`\Delta N_e`$ & $`\Delta N_h`$ = changes in e's and h's concentrations ($`\text{cm}^{-3}`$), and $`\Delta n`$ and $`\Delta\alpha`$ ($`\text{cm}^{-1}`$) are the changes in index of refraction and optical field loss coefficient, respectively. It is worth noting the greater effectiveness of h's relative to e's due to the higher ratio $`\Delta n / \Delta\alpha`$.
@@ -197,11 +197,11 @@ CT^{\text{OFF}} = \frac{P_d^{\text{OFF}}}{P_t^{\text{OFF}}} \qquad\&\qquad CT^{\
 Employing these IL & CT parameters, the following power relations can be obtained:
 
 ```math
-P_t^{\text{OFF}} = IL^{\text{OFF}} \cdot P_i \tag{4} \qquad\qquad P_d^{\text{ON}} = IL^{\text{ON}} \cdot P_i \tag{6}
+P_t^{\text{OFF}} = IL^{\text{OFF}} \cdot P_i \quad (4) \qquad\qquad P_d^{\text{ON}} = IL^{\text{ON}} \cdot P_i \quad (6)
 ```
 
 ```math
-P_d^{\text{OFF}} = CT^{\text{OFF}} \cdot P_t^{\text{OFF}} \tag{5} \qquad\qquad P_t^{\text{ON}} = CT^{\text{ON}} \cdot P_d^{\text{ON}} \tag{7}
+P_d^{\text{OFF}} = CT^{\text{OFF}} \cdot P_t^{\text{OFF}} \quad (5) \qquad\qquad P_t^{\text{ON}} = CT^{\text{ON}} \cdot P_d^{\text{ON}} \quad (7)
 ```
 
 In the above, $`IL^{\text{ON}}`$ is slightly greater than $`IL^{\text{OFF}}`$, due to path-length difference. However, we shall approximate $`IL^{\text{ON}} \approx IL^{\text{OFF}}`$.
@@ -215,7 +215,7 @@ ER_t = \frac{P_t^{\text{OFF}}}{P_t^{\text{ON}}} \qquad\text{and}\qquad ER_d = \f
 Employing these ER's in the CT definitions, we find:
 
 ```math
-CT^{\text{OFF}} = \frac{IL^{\text{ON}}}{IL^{\text{OFF}} \cdot ER_d} \tag{8} \qquad\qquad CT^{\text{ON}} = \frac{IL^{\text{OFF}}}{IL^{\text{ON}} \cdot ER_t} \tag{9}
+CT^{\text{OFF}} = \frac{IL^{\text{ON}}}{IL^{\text{OFF}} \cdot ER_d} \quad (8) \qquad\qquad CT^{\text{ON}} = \frac{IL^{\text{OFF}}}{IL^{\text{ON}} \cdot ER_t} \quad (9)
 ```
 
 > \* It is worth noting that in regards to switching speed, the E.O. is much faster. The switching times: $`\sim 1\ \mu s`$ (TO) $`\longleftrightarrow`$ $`\sim 1\ \text{ns}`$ (EO).
@@ -229,7 +229,7 @@ It is worth noting that the bandwidths for the two switching paths of the MRR-ba
 During the switch element operation, **"balanced"** (symmetrical) switching is essential: steering equal power levels from input to either output (drop / thru), and doing so under equal ER's. In equation form:
 
 ```math
-P_d^{\text{ON}} \approx P_t^{\text{OFF}} \tag{10} \qquad,\qquad ER_d \approx ER_t \tag{11}
+P_d^{\text{ON}} \approx P_t^{\text{OFF}} \quad (10) \qquad,\qquad ER_d \approx ER_t \quad (11)
 ```
 
 Assuming the switching — as a result of $`n_{\text{eff}}`$ tuning (by TO or EO effects) — only shifts the resonance wavelength w/o altering the shape of the transmission curve (function), Eqns (10) & (11) are automatically satisfied. When $`IL^{\text{ON}} \approx IL^{\text{OFF}}`$:

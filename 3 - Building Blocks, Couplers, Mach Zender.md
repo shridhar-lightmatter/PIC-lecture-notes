@@ -31,31 +31,31 @@ The Y-branch, aka Y-junction, may be employed in one of two modes: **splitter** 
 **Splitter:** provided the fork (bifurcation) angle is small ($`\sim 10°`$), the input power in a symmetric Y-branch splits equally, i.e. 50–50 b/w the two outputs $`\tfrac{1}{2}P_{in}`$, $`\tfrac{1}{2}P_{in}`$ as shown in (a). It is noteworthy that this function is predicated on small fork angles. [For contrast, consider the extreme of $`90°`$ (i.e. a "T"); here, as can be clearly appreciated, a portion of the input power is inevitably lost to backreflection at the flat base of the "T".]
 
 ```math
-P_1 = P_2 = \tfrac{1}{2}P_{in} \tag{1}
+P_1 = P_2 = \tfrac{1}{2}P_{in} \quad (1)
 ```
 
 where in terms of the optical E-field
 
 ```math
-P \propto |E|^2 \tag{2}
+P \propto |E|^2 \quad (2)
 ```
 
 Thus, 50–50 power split implies
 
 ```math
-E_1 = E_2 = \frac{E_{in}}{\sqrt{2}} \tag{3}
+E_1 = E_2 = \frac{E_{in}}{\sqrt{2}} \quad (3)
 ```
 
 **Combiner:** this involves the reverse action where two input optical waves tend to add. Their combining, however, leads to interference and loss of power by radiation. It can be shown through "coupled-mode" theory that only 50% of the total power input appears at the output "funnel", with the remainder lost to radiation, i.e.
 
 ```math
-P_{out} = \tfrac{1}{2}P_1 + \tfrac{1}{2}P_2 \tag{4}
+P_{out} = \tfrac{1}{2}P_1 + \tfrac{1}{2}P_2 \quad (4)
 ```
 
 or, in terms of optical E-fields,
 
 ```math
-E_{out} = \frac{E_1}{2} + \frac{E_2}{2} \tag{5}
+E_{out} = \frac{E_1}{2} + \frac{E_2}{2} \quad (5)
 ```
 
 ---
@@ -83,13 +83,13 @@ As to polarization (direction of E-field in IR light), the two common directions
 The principle of operation of the directional coupler is based on the "coupled-modes" theory (See Yariv, *"Photonics"*, 2006). While a presentation of the theory is beyond the scope of this course, we shall simply import the result: **SCATTERING MATRIX** of the DC (Appendix A). Ignoring reflections in the WG's, the light E-fields at the two output ports $`(E_{o_1}, E_{o_2})`$ can be related to the corresponding $`E_{i_1}, E_{i_2}`$ at the input ports by the following "reduced" S-matrix:
 
 ```math
-\begin{pmatrix} E_{o_1} \\ E_{o_2} \end{pmatrix} = [S] \cdot \begin{pmatrix} E_{i_1} \\ E_{i_2} \end{pmatrix} \tag{1}
+\begin{pmatrix} E_{o_1} \\ E_{o_2} \end{pmatrix} = [S] \cdot \begin{pmatrix} E_{i_1} \\ E_{i_2} \end{pmatrix} \quad (1)
 ```
 
 where $`[S]`$ is called the "**scattering matrix**" and is given by:
 
 ```math
-[S] = e^{-j\beta\ell} \begin{pmatrix} \cos c\ell & -j\sin c\ell \\ -j\sin c\ell & \cos c\ell \end{pmatrix} \tag{2}
+[S] = e^{-j\beta\ell} \begin{pmatrix} \cos c\ell & -j\sin c\ell \\ -j\sin c\ell & \cos c\ell \end{pmatrix} \quad (2)
 ```
 
 Here,
@@ -103,7 +103,7 @@ Note that the "coupling coefficient" $`(c)`$ is a function of the separating gap
 Combining (1) & (2) yields the DC's I/O relations:
 
 ```math
-\begin{cases} E_{o_1} = e^{-j\beta\ell}\left( \cos c\ell\; E_{i_1} - j\sin c\ell\; E_{i_2} \right) \\[4pt] E_{o_2} = e^{-j\beta\ell}\left( -j\sin c\ell\; E_{i_1} + \cos c\ell\; E_{i_2} \right) \end{cases} \tag{3}
+\begin{cases} E_{o_1} = e^{-j\beta\ell}\left( \cos c\ell\; E_{i_1} - j\sin c\ell\; E_{i_2} \right) \\[4pt] E_{o_2} = e^{-j\beta\ell}\left( -j\sin c\ell\; E_{i_1} + \cos c\ell\; E_{i_2} \right) \end{cases} \quad (3)
 ```
 
 **Properties:**
@@ -134,7 +134,7 @@ It's worthwhile examining the intensity distribution of the light field inside t
 A particular case of interest is the popular symmetrical 50–50 directional coupler called appropriately a "**3-dB coupler**". Here $`c\ell`$ is adjusted through the length $`(\ell)`$ of the coupling region to $`c\ell = \pi/4`$. This results in the following symmetrical scattering matrix:
 
 ```math
-[S] = \frac{e^{-j\beta\ell}}{\sqrt{2}} \begin{pmatrix} 1 & -j \\ -j & 1 \end{pmatrix} \tag{4}
+[S] = \frac{e^{-j\beta\ell}}{\sqrt{2}} \begin{pmatrix} 1 & -j \\ -j & 1 \end{pmatrix} \quad (4)
 ```
 
 which reveals the symmetric and quadrature features of the 3-dB directional coupler. These properties are exploited in the design of optical filters, Mux's and deMux's.
@@ -168,19 +168,19 @@ Substituting the E-fields for $`a_{1,2}`$ (inputs) and $`b_{3,4}`$ (outputs):
 where,
 
 ```math
-[S] = e^{-j\beta\ell} \begin{pmatrix} \sqrt{1-\kappa^2} & -j\kappa \\ -j\kappa & \sqrt{1-\kappa^2} \end{pmatrix} \tag{A.5}
+[S] = e^{-j\beta\ell} \begin{pmatrix} \sqrt{1-\kappa^2} & -j\kappa \\ -j\kappa & \sqrt{1-\kappa^2} \end{pmatrix} \quad (A.5)
 ```
 
 where $`\kappa`$ = **COUPLING COEFFICIENT**. It can be shown it is related to the per-unit-length coupling coefficient $`c\ (m^{-1})`$:
 
 ```math
-\left. \begin{aligned} \kappa &= \sin c\ell \\ \sqrt{1-\kappa^2} &= \cos c\ell \end{aligned} \right\} \quad \text{(A.6)} \;\rightarrow\; [S] = e^{-j\beta\ell} \begin{pmatrix} \cos c\ell & -j\sin c\ell \\ -j\sin c\ell & \cos c\ell \end{pmatrix} \tag{A.7}
+\left. \begin{aligned} \kappa &= \sin c\ell \\ \sqrt{1-\kappa^2} &= \cos c\ell \end{aligned} \right\} \quad \text{(A.6)} \;\rightarrow\; [S] = e^{-j\beta\ell} \begin{pmatrix} \cos c\ell & -j\sin c\ell \\ -j\sin c\ell & \cos c\ell \end{pmatrix} \quad (A.7)
 ```
 
 **Note:** for a microring-WG, $`\ell \rightarrow 0`$:
 
 ```math
-\left. \begin{aligned} \kappa &\approx c\ell \\ \sqrt{1-\kappa^2} &= \sqrt{1-(c\ell)^2} \end{aligned} \right\} \tag{A.8}
+\left. \begin{aligned} \kappa &\approx c\ell \\ \sqrt{1-\kappa^2} &= \sqrt{1-(c\ell)^2} \end{aligned} \right\} \quad (A.8)
 ```
 
 > \* $`\ell \rightarrow 0`$: $`(c\ell\ \&\ \beta\ell) \rightarrow 0`$, so that $`\sin c\ell \rightarrow c\ell`$ & $`\cos c\ell = \sqrt{1-(c\ell)^2}`$.
@@ -203,7 +203,7 @@ As is evident from Fig 1, a coherent light input (In) is equally divided by a sy
 The phase shift $`\Delta\phi`$ can be simply implemented using unequal arm-lengths $`L_1, L_2`$ in the MZI (Fig 2). The path difference $`\Delta L = L_1 - L_2`$ results in a difference in light travel times $`\Delta t = \Delta L / (c/n)`$, and hence a phase shift $`\Delta\phi = \omega\,\Delta t`$:
 
 ```math
-\Delta\phi = 2\pi f\left( \frac{\Delta L}{c/n} \right) = 2\pi\left( \frac{\Delta L}{\lambda/n} \right) \tag{1}
+\Delta\phi = 2\pi f\left( \frac{\Delta L}{c/n} \right) = 2\pi\left( \frac{\Delta L}{\lambda/n} \right) \quad (1)
 ```
 
 where
@@ -226,11 +226,11 @@ T = \frac{P_{out}}{P_{in}} = \frac{|E_{out}|^2}{|E_{in}|^2}
 ```
 
 ```math
-E_{out} = \frac{E_1'}{2} + \frac{E_2'}{2} = \frac{E_1}{2}e^{j(\omega t + \Delta\phi)} + \frac{E_2}{2}e^{j(\omega t)} \tag{2} \quad \text{combiner}
+E_{out} = \frac{E_1'}{2} + \frac{E_2'}{2} = \frac{E_1}{2}e^{j(\omega t + \Delta\phi)} + \frac{E_2}{2}e^{j(\omega t)} \quad (2) \quad \text{combiner}
 ```
 
 ```math
-E_{1,2} = \frac{E_{in}}{\sqrt{2}} \tag{3} \quad \text{splitter}
+E_{1,2} = \frac{E_{in}}{\sqrt{2}} \quad (3) \quad \text{splitter}
 ```
 
 ```math
@@ -246,11 +246,11 @@ E_{1,2} = \frac{E_{in}}{\sqrt{2}} \tag{3} \quad \text{splitter}
 ```
 
 ```math
-\therefore\; |E_{out}|^2 = \frac{|E_{in}|^2}{4}\left( 1 + \cos\Delta\phi \right) \tag{4}
+\therefore\; |E_{out}|^2 = \frac{|E_{in}|^2}{4}\left( 1 + \cos\Delta\phi \right) \quad (4)
 ```
 
 ```math
-\therefore\; T = \frac{P_{out}}{P_{in}} = 0.25\,(1 + \cos\Delta\phi) \tag{5}
+\therefore\; T = \frac{P_{out}}{P_{in}} = 0.25\,(1 + \cos\Delta\phi) \quad (5)
 ```
 
 A plot of $`T`$ follows:
@@ -287,7 +287,7 @@ T = 0.5\left[ 1 + \cos\left( \frac{2\pi n\Delta L}{c} f \right) \right]
 The frequency interval spanning two nulls flanking a maximum (@ operating frequency $`f_0`$) is the ultimate (widest) bandwidth available for a data-modulated carrier @ $`f_0`$. It is referred to as the system "**FREE-SPECTRAL RANGE**" (FSR). Note that it is also the "period" of the filter frequency response, and thus:
 
 ```math
-\boxed{\;\text{FSR} = \frac{c}{n\,\Delta L} \quad (\text{Hz})\;} \tag{6}
+\boxed{\;\text{FSR} = \frac{c}{n\,\Delta L} \quad (\text{Hz})\;} \quad (6)
 ```
 
 Note the inverse dependence on the "path-length difference" $`\Delta L`$ of the MZI. For a wider FSR the required $`\Delta L`$ is smaller (which is limited by the resolution of the fabrication process).

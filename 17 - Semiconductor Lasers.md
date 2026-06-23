@@ -15,13 +15,13 @@ Light can be emitted from a semiconductor material by a process of **electron–
 The frequency ($`f`$) of the emitted photon is determined by $`E_g = hf`$:
 
 ```math
-f = E_g / h \tag{1}
+f = E_g / h \quad (1)
 ```
 
 and using $`\lambda = c/f`$, the corresponding emitted wavelength $`\lambda`$ is:
 
 ```math
-\lambda\,(\mu m) = \frac{1.24}{E_g\,(\text{eV})} \tag{2}
+\lambda\,(\mu m) = \frac{1.24}{E_g\,(\text{eV})} \quad (2)
 ```
 
 For example, for GaAs with $`E_g = 1.42\ \text{eV}`$ one finds $`\lambda = 0.87\ \mu m`$.
@@ -78,7 +78,7 @@ If the junction is **reverse biased** by applying a negative voltage $`V`$ to th
 A p–n junction therefore acts as a diode with a current–voltage ($`i`$–$`V`$) characteristic:
 
 ```math
-\boxed{\,i = i_s\left[\exp\!\left(\frac{eV}{k_B T}\right) - 1\right]\,} \tag{15.1-24}
+\boxed{\,i = i_s\left[\exp\!\left(\frac{eV}{k_B T}\right) - 1\right]\,} \quad (15.1-24)
 ```
 
 *(Ideal Diode Characteristic.)*

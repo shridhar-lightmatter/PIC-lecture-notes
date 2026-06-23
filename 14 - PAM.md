@@ -107,18 +107,18 @@ E_s = T_s \cdot \left(\tfrac{5}{9}A^2\right) = 2T\left(\tfrac{5}{9}A^2\right), \
 
 To determine what system bandwidth (Hz) is required for processing a PAM transmission, knowledge of its frequency spectrum $`S(f)`$ is needed.
 
-It can be shown that the **Power Spectrum** $`S(f)`$ of PAM-2 and PAM-4 data both have the form of $`\operatorname{sinc}^2`$ function $`\left(\operatorname{sinc} x \triangleq \left(\tfrac{\sin x}{x}\right)^2\right)`$. This is shown below: the difference b/w the two spectra is the data rate applicable — **Bit Rate** $`R_b`$ ($`\text{b/s}`$) for PAM-2 and **Symbol Rate** $`R_s`$ ($`\text{S/s}`$) (or Baud/s) for PAM-4.
+It can be shown that the **Power Spectrum** $`S(f)`$ of PAM-2 and PAM-4 data both have the form of $`\mathrm{sinc}^2`$ function $`\left(\mathrm{sinc} x \triangleq \left(\tfrac{\sin x}{x}\right)^2\right)`$. This is shown below: the difference b/w the two spectra is the data rate applicable — **Bit Rate** $`R_b`$ ($`\text{b/s}`$) for PAM-2 and **Symbol Rate** $`R_s`$ ($`\text{S/s}`$) (or Baud/s) for PAM-4.
 
 ![Fig 3 — Power spectra of PAM-2 and PAM-4](figures/14/fig03-pam-spectra.png)
 
-*Fig 3. PAM-2 ($`R_b = T^{-1}`$) and PAM-4 ($`R_s = T_s^{-1}`$) power spectra, both of $`\operatorname{sinc}^2`$ form. Note $`R_s = \tfrac{1}{2}R_b`$.*
+*Fig 3. PAM-2 ($`R_b = T^{-1}`$) and PAM-4 ($`R_s = T_s^{-1}`$) power spectra, both of $`\mathrm{sinc}^2`$ form. Note $`R_s = \tfrac{1}{2}R_b`$.*
 
 ```math
-\text{PAM-2:}\quad S(f) = A^2 T\,\operatorname{sinc}^2(\pi f T)
+\text{PAM-2:}\quad S(f) = A^2 T\,\mathrm{sinc}^2(\pi f T)
 ```
 
 ```math
-\text{PAM-4:}\quad S(f) = \tfrac{5}{9}A^2 T_s\,\operatorname{sinc}^2(\pi f T_s)
+\text{PAM-4:}\quad S(f) = \tfrac{5}{9}A^2 T_s\,\mathrm{sinc}^2(\pi f T_s)
 ```
 
 The **channel bandwidth** required to accommodate these signals is often taken to equal the width of the central lobe: i.e. $`\pm R_b`$ (PAM2) and $`\pm R_s`$ (PAM4). The justification being that ~90% of the PAM signal power is contained in it.
@@ -192,10 +192,10 @@ Since $`P[n > v] = P[n < -v]`$ due to symmetry of the Gaussian PDF $`P_n`$:
 - The **Q-function** above:
 
 ```math
-Q(x) \triangleq \frac{1}{\sqrt{2\pi}}\int_x^{\infty} e^{-\frac{z^2}{2}}\,dz = \tfrac{1}{2}\operatorname{erfc}\!\left(\tfrac{x}{\sqrt{2}}\right), \qquad x = \sqrt{\text{SNR}}
+Q(x) \triangleq \frac{1}{\sqrt{2\pi}}\int_x^{\infty} e^{-\frac{z^2}{2}}\,dz = \tfrac{1}{2}\mathrm{erfc}\!\left(\tfrac{x}{\sqrt{2}}\right), \qquad x = \sqrt{\text{SNR}}
 ```
 
-- where $`\ \operatorname{erf}(u) \triangleq \dfrac{1}{\sqrt{2\pi}}\displaystyle\int_{-u}^{u} e^{-y^2}\,dy, \qquad \operatorname{erfc}(u) \triangleq 1 - \operatorname{erf}(u)`$
+- where $`\ \mathrm{erf}(u) \triangleq \dfrac{1}{\sqrt{2\pi}}\displaystyle\int_{-u}^{u} e^{-y^2}\,dy, \qquad \mathrm{erfc}(u) \triangleq 1 - \mathrm{erf}(u)`$
 - For $`x \gtrsim 3`$: $`\quad Q(x) \approx \dfrac{1}{\sqrt{2\pi}\,x}\, e^{-x^2/2}`$
 
 > **NOTE:**
@@ -250,7 +250,7 @@ Furthermore, the mean-square noise ($`\sigma^2`$) may be taken as the average of
 Thus, the $`\sqrt{\text{SNR}}`$, which is given by $`A/\sigma`$, becomes $`\dfrac{R\,(P(1) - P(0))}{\sigma(1) + \sigma(0)}`$, and the BER:
 
 ```math
-\text{BER} = \tfrac{1}{2}\operatorname{erfc}\!\left(\tfrac{x}{\sqrt{2}}\right) = Q(x), \qquad x = R\,\frac{P(1) - P(0)}{\sigma(1) + \sigma(0)}
+\text{BER} = \tfrac{1}{2}\mathrm{erfc}\!\left(\tfrac{x}{\sqrt{2}}\right) = Q(x), \qquad x = R\,\frac{P(1) - P(0)}{\sigma(1) + \sigma(0)}
 ```
 
 Using the previously developed eqns for $`P(1)`$ & $`P(0)`$ for the MR modulator:
@@ -300,13 +300,13 @@ P\!\left[n > \tfrac{A}{3}\right] = P\!\left[n < -\tfrac{A}{3}\right] = Q\!\left(
 ```
 
 ```math
-\left(Q(x) = \int_x^{\infty}\frac{1}{\sqrt{2\pi}}\,e^{-\frac{z^2}{2}}\,dz = \tfrac{1}{2}\operatorname{erfc}\!\left[\tfrac{x}{\sqrt{2}}\right]\right)
+\left(Q(x) = \int_x^{\infty}\frac{1}{\sqrt{2\pi}}\,e^{-\frac{z^2}{2}}\,dz = \tfrac{1}{2}\mathrm{erfc}\!\left[\tfrac{x}{\sqrt{2}}\right]\right)
 ```
 
 $`P_s`$ then reduces to:
 
 ```math
-\boxed{\ \text{SER} = P_s = \tfrac{3}{2}\,Q\!\left[\tfrac{A/3}{\sigma}\right] \left(= \tfrac{3}{4}\operatorname{erfc}\!\left[\tfrac{A/3}{\sqrt{2}\,\sigma}\right]\right)\ } \qquad \text{(Symbol Error Rate)}
+\boxed{\ \text{SER} = P_s = \tfrac{3}{2}\,Q\!\left[\tfrac{A/3}{\sigma}\right] \left(= \tfrac{3}{4}\mathrm{erfc}\!\left[\tfrac{A/3}{\sqrt{2}\,\sigma}\right]\right)\ } \qquad \text{(Symbol Error Rate)}
 ```
 
 ### BER (from SER)
@@ -341,7 +341,7 @@ since in PAM4 there are 2 bits per symbol.
 Summarizing in the form of "Bit Error Rate" ($`\text{BER} = P_b`$):
 
 ```math
-\boxed{\ \text{BER} \approx \tfrac{3}{4}\,Q\!\left(\tfrac{A}{3\sigma}\right) \left(= \tfrac{3}{8}\operatorname{erfc}\!\left(\tfrac{A}{3\sigma\sqrt{2}}\right)\right)\ }
+\boxed{\ \text{BER} \approx \tfrac{3}{4}\,Q\!\left(\tfrac{A}{3\sigma}\right) \left(= \tfrac{3}{8}\mathrm{erfc}\!\left(\tfrac{A}{3\sigma\sqrt{2}}\right)\right)\ }
 ```
 
 > (Note: $`\text{BER} = \tfrac{1}{2}\,\text{SER}`$)
@@ -410,11 +410,11 @@ The arguments of the $`Q(x)`$ function can now be rewritten for convenience in t
 This leads to useful expressions for the BER's:
 
 ```math
-\text{PAM2:}\quad P_b = \text{BER} = Q\!\left(\sqrt{\tfrac{E_b}{N_0}}\right) = \tfrac{1}{2}\operatorname{erfc}\!\left(\sqrt{\tfrac{E_b}{2N_0}}\right) \qquad \tfrac{E_b}{N_0} = \text{SNR}
+\text{PAM2:}\quad P_b = \text{BER} = Q\!\left(\sqrt{\tfrac{E_b}{N_0}}\right) = \tfrac{1}{2}\mathrm{erfc}\!\left(\sqrt{\tfrac{E_b}{2N_0}}\right) \qquad \tfrac{E_b}{N_0} = \text{SNR}
 ```
 
 ```math
-\text{PAM4:}\quad P_b = \text{BER} \approx \tfrac{3}{4}\,Q\!\left(\sqrt{\tfrac{2E_b}{5N_0}}\right) \approx \tfrac{3}{8}\operatorname{erfc}\!\left(\sqrt{\tfrac{E_b}{5N_0}}\right) \qquad \tfrac{2E_s}{N_0} = \text{SNR}
+\text{PAM4:}\quad P_b = \text{BER} \approx \tfrac{3}{4}\,Q\!\left(\sqrt{\tfrac{2E_b}{5N_0}}\right) \approx \tfrac{3}{8}\mathrm{erfc}\!\left(\sqrt{\tfrac{E_b}{5N_0}}\right) \qquad \tfrac{2E_s}{N_0} = \text{SNR}
 ```
 
 ![Fig 11 — Probability of bit error vs. Eb/N0 for M-PAM](figures/14/fig11-ber-ebn0.png)

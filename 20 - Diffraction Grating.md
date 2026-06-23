@@ -227,7 +227,7 @@ where $`\;u = \left(\dfrac{\pi W}{\lambda}\right)\sin\alpha`$.
 Finally the light intensity ($`I`$):
 
 ```math
-I \approx E^2 = \left(\frac{AW}{R}\right)^2 \operatorname{sinc}^2\!\left(\frac{\pi W}{\lambda}\sin\alpha\right) \qquad (3)**
+I \approx E^2 = \left(\frac{AW}{R}\right)^2 \mathrm{sinc}^2\!\left(\frac{\pi W}{\lambda}\sin\alpha\right) \qquad (3)
 ```
 
 > \* Huygens' principle: each point on a wave front may be regarded as a secondary (new) source of spherical wavelets.
@@ -330,7 +330,7 @@ Applying the Fourier transform to an optical field made of a train of a very lar
 
 ![Grating field and its far-field Fourier transform](figures/20/fig13-grating-fourier.png)
 
-*Far-field (Fourier transform) of a periodic grating field: a series of maxima spaced by $`\lambda\dfrac{D}{d}`$ enveloped by the single-slit $`\operatorname{sinc}`$ of width $`\lambda\dfrac{D}{W}`$ ($`d \gg W`$).*
+*Far-field (Fourier transform) of a periodic grating field: a series of maxima spaced by $`\lambda\dfrac{D}{d}`$ enveloped by the single-slit $`\mathrm{sinc}`$ of width $`\lambda\dfrac{D}{W}`$ ($`d \gg W`$).*
 
 Referring to the far-field distribution of a grating in Fig 2, one concludes that instead of equal-sized maxima the actual distribution displays a progressive decay in amplitude as shown above. This feature is clearly evident from the photo in Fig 6 showing the far field of a large number $`N = 20`$ of slits.
 

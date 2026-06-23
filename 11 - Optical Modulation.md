@@ -42,10 +42,10 @@ The distribution of signal power over frequency is of importance. It determines 
 
 ## Power Spectrum
 
-The power spectrum $`S(f)`$ of the various digital modulations has common features. The mathematical description is given by the function $`\operatorname{sinc}^2(x) = \left(\dfrac{\sin x}{x}\right)^2`$:
+The power spectrum $`S(f)`$ of the various digital modulations has common features. The mathematical description is given by the function $`\mathrm{sinc}^2(x) = \left(\dfrac{\sin x}{x}\right)^2`$:
 
 ```math
-S(f) = E_b\,\operatorname{sinc}^2\!\big[\pi(f - f_c)T_b\big] \qquad \left(\int S(f)\,df = P\right)
+S(f) = E_b\,\mathrm{sinc}^2\!\big[\pi(f - f_c)T_b\big] \qquad \left(\int S(f)\,df = P\right)
 ```
 
 ![Fig 2 — Power spectrum of a digital modulation](figures/11/fig02-power-spectrum.png)
@@ -178,7 +178,7 @@ R_b \to R_s\left(= \frac{R_b}{K}\right) \quad \text{"Symbol Rate" } (T_s = K T_b
 E_b \to E_s\left(= K E_b\right) \quad \text{"Energy/Symbol"}
 ```
 ```math
-S(f) = E_s\,\operatorname{sinc}^2\!\big[\pi(f - f_c)T_s\big], \quad T_s = R_s^{-1}, \quad B = R_s = \frac{R_b}{K}
+S(f) = E_s\,\mathrm{sinc}^2\!\big[\pi(f - f_c)T_s\big], \quad T_s = R_s^{-1}, \quad B = R_s = \frac{R_b}{K}
 ```
 
 **M-FSK:** $`M`$-superimposed (orthogonal) spectra of the simple FSK, with $`M = 2^K`$ and $`B \approx (M+1)R_s`$.
@@ -329,11 +329,11 @@ As previously noted, the "electro-optic" effect in Si is based on the so-called 
 At $`\lambda = 1.55\ \mu m`$:
 
 ```math
-\Delta n = -\big(8.8 \times 10^{-22}\,\Delta N_e + 8.5 \times 10^{-18}(\Delta N_h)^{0.8}\big) \tag{1}
+\Delta n = -\big(8.8 \times 10^{-22}\,\Delta N_e + 8.5 \times 10^{-18}(\Delta N_h)^{0.8}\big) \quad (1)
 ```
 
 ```math
-\Delta\alpha = 8.5 \times 10^{-18}\,\Delta N_e + 6.0 \times 10^{-18}\,\Delta N_h \tag{2}
+\Delta\alpha = 8.5 \times 10^{-18}\,\Delta N_e + 6.0 \times 10^{-18}\,\Delta N_h \quad (2)
 ```
 
 Note that holes have a larger ratio of real to imaginary refractive index change. For this reason they are more effective for the operation of the p–n junction phase shifters in the MZI modulator. This is taken advantage of in practice by a wider p-side depletion layer in the p–n junction, which is realized through lighter acceptor doping.
@@ -341,11 +341,11 @@ Note that holes have a larger ratio of real to imaginary refractive index change
 At $`\lambda = 1.31\ \mu m`$, the corresponding empirical equations are:
 
 ```math
-\Delta n = -\big(6.2 \times 10^{-22}\,\Delta N_e + 6.0 \times 10^{-18}(\Delta N_h)^{0.8}\big) \tag{3}
+\Delta n = -\big(6.2 \times 10^{-22}\,\Delta N_e + 6.0 \times 10^{-18}(\Delta N_h)^{0.8}\big) \quad (3)
 ```
 
 ```math
-\Delta\alpha = 6 \times 10^{-18}\,\Delta N_e + 4.0 \times 10^{-18}\,\Delta N_h \tag{4}
+\Delta\alpha = 6 \times 10^{-18}\,\Delta N_e + 4.0 \times 10^{-18}\,\Delta N_h \quad (4)
 ```
 
 **Example:** For a Si p–n junction with doping $`N_A = N_D = 5 \times 10^{17}\ \text{cm}^{-3}`$, under a reverse bias a change in carrier concentration $`\Delta N_e \approx \Delta N_h = -5 \times 10^{17}\ \text{cm}^{-3}`$ would take place. The resulting change (at $`\lambda = 1.31\ \mu m`$) is:
