@@ -76,11 +76,7 @@ The shift $`\Delta\lambda_r`$ in resonant wavelength $`\lambda_r`$ induced by th
 where,
 
 - $`N_a, N_d`$ = acceptor ($`p`$) and donor ($`n`$) doping concentrations (cm⁻³)
-- $`V_{bi}`$ = built-in potential of the junction given by
-  ```math
-V_{bi} = \frac{kT}{q}\ln\!\left(\frac{N_a N_d}{n_i^2}\right),
-```
-  where $`n_i = 1.45\times10^{10}\ \text{cm}^{-3}`$ is the intrinsic carrier conc. of undoped (pure) Si (at room temperature)
+- $`V_{bi}`$ = built-in potential of the junction given by $`V_{bi} = \frac{kT}{q}\ln\!\left(\frac{N_a N_d}{n_i^2}\right)`$, where $`n_i = 1.45\times10^{10}\ \text{cm}^{-3}`$ is the intrinsic carrier conc. of undoped (pure) Si (at room temperature)
 - $`W`$ = width of the microring; $`\varepsilon = 12\,\varepsilon_0`$ (Si permittivity)
 - $`\Gamma`$ = **"confinement" factor** describing overlap of the optical mode with Si core
 - $`n_f`$ = numerical constant (cm³)

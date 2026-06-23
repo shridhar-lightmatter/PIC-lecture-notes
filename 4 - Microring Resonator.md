@@ -433,10 +433,7 @@ m\,T_m = \frac{2\pi R}{c/n} &\;\rightarrow\; f_m = m\,\frac{c/n}{2\pi R} \\
 **Conclusion:** the FSR equals the inverse of the ring's roundtrip travel time!
 
 - **Example 1:** see [Example 1](#example-1) below.
-- **Example 2:** $`R = ?`$ for $`\text{FSR} = 300\ \text{GHz}`$ for an MRR fabricated in SOI ($`n_{\text{eff}} = 2.5`$).
-  ```math
-\text{Ans:}\quad R = \frac{c}{2\pi n_{\text{eff}}\,\text{FSR}_f} = 64\ \mu m
-```
+- **Example 2:** $`R = ?`$ for $`\text{FSR} = 300\ \text{GHz}`$ for an MRR fabricated in SOI ($`n_{\text{eff}} = 2.5`$). $`\text{Ans:}\quad R = \frac{c}{2\pi n_{\text{eff}}\,\text{FSR}_f} = 64\ \mu m`$
 
 ### II) Dispersive medium: $`n(f)`$
 
